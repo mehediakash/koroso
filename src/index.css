@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  /* --color-primery: #F26C8E; */
+  --color-primery: #0065B2;
+  --color-white: white;
+}
+body{
+  overflow-x: hidden;
+}
