@@ -16,15 +16,10 @@ const CounterSection = () => {
     <section className="relative z-10 bg-blue-900 text-white py-16 px-4">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-lime-400">
-          STRONGER TOGETHER
+          Impact
         </h2>
         <p className="mt-4 text-base md:text-lg text-gray-200 max-w-3xl mx-auto">
-          Engineers Without Borders USA (EWB-USA) is a nonprofit humanitarian
-          organization established to support community-driven development
-          programs worldwide through partnerships that design and implement
-          sustainable engineering projects, while providing transformative
-          experiences that enrich global perspectives and create responsible
-          leaders.
+          Partner with Oromo Tech & Innovation Society on sustainable engineering solutions that equip communities to thrive for generations.
         </p>
 
         {/* Stats */}
