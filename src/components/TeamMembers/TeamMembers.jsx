@@ -4,16 +4,13 @@ import {
   Linkedin, 
   Twitter, 
   ExternalLink,
-  Play,
-  Pause,
-  Music,
   GraduationCap,
   Award,
   MapPin
 } from 'lucide-react';
 
 const TeamMembers = () => {
-  const [playingAudio, setPlayingAudio] = useState(null);
+  const [showBio, setShowBio] = useState(false); // নতুন state
 
   const teamMembers = [
     {
@@ -24,11 +21,6 @@ const TeamMembers = () => {
       bio: "Hawwani Benti is a senior majoring in business and marketing. Her favorite song Ajaba Bontu by Umar Alii Faarah.",
       major: "Business & Marketing",
       year: "Senior",
-      favoriteSong: {
-        title: "Ajaba Bontu",
-        artist: "Umar Alii Faarah",
-        previewUrl: "#" // Replace with actual audio URL
-      },
       socialLinks: {
         email: "hawwani@example.com",
         linkedin: "#",
@@ -44,11 +36,6 @@ const TeamMembers = () => {
       bio: "Amane Etefa is a junior majoring in global studies and art history. Her favorite song Kana Jedhiin by Gadaa Hamda.",
       major: "Global Studies & Art History",
       year: "Junior",
-      favoriteSong: {
-        title: "Kana Jedhiin",
-        artist: "Gadaa Hamda",
-        previewUrl: "#"
-      },
       socialLinks: {
         email: "amane@example.com",
         linkedin: "#",
@@ -64,11 +51,6 @@ const TeamMembers = () => {
       bio: "Faaya Adem is a junior majoring in journalism and geography. Her favorite song is Barreedduu Oromo by Ali Birra.",
       major: "Journalism & Geography",
       year: "Junior",
-      favoriteSong: {
-        title: "Barreedduu Oromo",
-        artist: "Ali Birra",
-        previewUrl: "#"
-      },
       socialLinks: {
         email: "faaya@example.com",
         linkedin: "#",
@@ -77,17 +59,6 @@ const TeamMembers = () => {
       gradient: "from-green-500 to-emerald-500"
     }
   ];
-
-  const handleAudioPlay = (memberId, audioUrl) => {
-    if (playingAudio === memberId) {
-      setPlayingAudio(null);
-      // Here you would pause the actual audio
-    } else {
-      setPlayingAudio(memberId);
-      // Here you would play the actual audio
-      // new Audio(audioUrl).play();
-    }
-  };
 
   const SocialIcon = ({ href, icon: Icon, label, className = "" }) => (
     <a
@@ -108,12 +79,12 @@ const TeamMembers = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary dark:bg-primary/20 mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primery/10 text-primery dark:bg-primery/20 mb-4">
             <Award className="w-4 h-4" />
             <span className="text-sm font-medium">Meet Our Team</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Executive <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primery">Leadership</span>
+            Executive <span className="text-transparent bg-clip-text bg-gradient-to-r from-primery to-primery">Leadership</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
             Dedicated students leading with passion and vision. Get to know the talented individuals 
@@ -180,7 +151,7 @@ const TeamMembers = () => {
                 <div className="p-6 lg:p-8 relative z-10">
                   {/* Name and Title */}
                   <div className="mb-4">
-                    <h3 className="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-primery transition-all duration-300">
+                    <h3 className="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primery group-hover:to-primery transition-all duration-300">
                       {member.name}
                     </h3>
                     
@@ -198,23 +169,22 @@ const TeamMembers = () => {
                     </div>
                   </div>
 
-                  {/* Bio */}
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6 line-clamp-3">
-                    {member.bio}
-                  </p>
+                  {/* Bio (শুধু showBio true হলে দেখাবে) */}
+                  {showBio && (
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6 line-clamp-3">
+                      {member.bio}
+                    </p>
+                  )}
 
-            
-
-                
                 </div>
 
                 {/* Decorative Elements */}
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-primary/5 to-transparent rounded-bl-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-primery/5 to-transparent rounded-bl-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-purple-500/5 to-transparent rounded-tr-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
 
               {/* Floating Animation */}
-              <div className="absolute -inset-2 bg-gradient-to-r from-primary to-primery rounded-2xl opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-500 -z-10"></div>
+              <div className="absolute -inset-2 bg-gradient-to-r from-primery to-primery rounded-2xl opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-500 -z-10"></div>
             </div>
           ))}
         </div>
@@ -222,8 +192,10 @@ const TeamMembers = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-16 lg:mt-20">
           <div className="inline-flex flex-col sm:flex-row gap-4">
-            <button className="px-8 py-4 bg-gradient-to-r from-primary to-primery text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2">
-              Meet Full Team
+            <button 
+              onClick={() => setShowBio(!showBio)} // Meet Full Team এ ক্লিক করলে showBio টগল হবে
+              className="px-8 py-4 bg-gradient-to-r from-primery to-primery text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2">
+              {showBio ? 'Hide Team Bios' : 'Meet Full Team'}
               <ExternalLink className="w-4 h-4" />
             </button>
             <button className="px-8 py-4 bg-white/80 dark:bg-gray-800/80 text-gray-900 dark:text-white font-semibold rounded-xl border border-gray-200/50 dark:border-gray-700/50 shadow-sm hover:shadow-md transition-all duration-300">

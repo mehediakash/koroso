@@ -107,12 +107,12 @@ const Programs = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary dark:bg-primary/20 mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primery/10 text-primery dark:bg-primery/20 mb-4">
             <Sparkles className="w-4 h-4" />
             <span className="text-sm font-medium">Our Programs</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Empowering Through <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-600">Innovative Programs</span>
+            Empowering Through <span className="text-transparent bg-clip-text bg-gradient-to-r from-primery to-primery">Innovative Programs</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
             Comprehensive programs designed to support students, professionals, and community members 
@@ -131,13 +131,13 @@ const Programs = () => {
             >
               {/* Group Header */}
               <div className="flex items-center gap-4 mb-8 lg:mb-12">
-                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-r from-primary to-purple-600 text-white shadow-lg">
+                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-r from-primery to-primery text-white shadow-lg">
                   {group.icon}
                 </div>
                 <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white">
                   {group.title}
                 </h3>
-                <div className="flex-1 h-px bg-gradient-to-r from-primary/20 to-transparent ml-4"></div>
+                <div className="flex-1 h-px bg-gradient-to-r from-primery/20 to-transparent ml-4"></div>
               </div>
 
               {/* Program Cards Grid */}
@@ -166,7 +166,7 @@ const Programs = () => {
                         </div>
 
                         {/* Title */}
-                        <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-purple-600 transition-all duration-300">
+                        <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primery group-hover:to-primery transition-all duration-300">
                           {program.title}
                         </h4>
 
@@ -186,14 +186,14 @@ const Programs = () => {
                         </div>
 
                         {/* CTA Button */}
-                        <button className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors duration-200 group/btn">
+                        {/* <button className="inline-flex items-center gap-2 text-sm font-medium text-primery hover:text-primery/80 transition-colors duration-200 group/btn">
                           Learn More
                           <ArrowRight className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform duration-200" />
-                        </button>
+                        </button> */}
                       </div>
 
                       {/* Hover Effect Elements */}
-                      <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-primary/5 to-transparent rounded-bl-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-primery/5 to-transparent rounded-bl-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-purple-500/5 to-transparent rounded-tr-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </div>
                   </div>
@@ -206,7 +206,7 @@ const Programs = () => {
         {/* Bottom CTA
         <div className="text-center mt-16 lg:mt-20">
           <div className="inline-flex flex-col sm:flex-row gap-4">
-            <button className="px-8 py-4 bg-gradient-to-r from-primary to-purple-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+            <button className="px-8 py-4 bg-gradient-to-r from-primery to-primery text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
               Explore All Programs
             </button>
             <button className="px-8 py-4 bg-white/80 dark:bg-gray-800/80 text-gray-900 dark:text-white font-semibold rounded-xl border border-gray-200/50 dark:border-gray-700/50 shadow-sm hover:shadow-md transition-all duration-300">

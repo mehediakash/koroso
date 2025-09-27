@@ -28,27 +28,27 @@ const Footer = () => {
         <>
           <div className="space-y-2">
             <div className="flex items-start gap-3">
-              <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+              <MapPin className="w-5 h-5 text-primery mt-0.5 flex-shrink-0" />
               <div>
                 <p className="text-white">1031 33rd Street</p>
                 <p className="text-white">Denver, Colorado 80205</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-              <a href="tel:3037722723" className="text-white hover:text-primary transition-colors duration-200">
+              <Phone className="w-5 h-5 text-primery flex-shrink-0" />
+              <a href="tel:3037722723" className="text-white hover:text-white transition-colors duration-200">
                 303-772-2723
               </a>
             </div>
             <div className="flex items-center gap-3">
-              <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-              <a href="mailto:info@OTIS.org" className="text-white hover:text-primary transition-colors duration-200">
+              <Mail className="w-5 h-5 text-primery flex-shrink-0" />
+              <a href="mailto:info@OTIS.org" className="text-white hover:text-white transition-colors duration-200">
                 info@OTIS.org
               </a>
             </div>
           </div>
           <p className="text-gray-300 text-sm mt-4 leading-relaxed">
-            Engineers Without Borders USA is a 501(c)3 organization and a member of Engineers Without Borders International.
+            Oromo Tech & Innovation Society (OTIS)
           </p>
         </>
       )
@@ -56,8 +56,8 @@ const Footer = () => {
     about: {
       title: "ABOUT US",
       links: [
-        { name: "Mission & Vision", href: "/about-us" },
-        { name: "Financials", href: "/financials" },
+        { name: "Privacy", href: "/privacy" },
+        { name: "Terms", href: "/terms" },
         { name: "Our Team", href: "/our-team" },
         { name: "Commitment to DEI", href: "/dei" },
         { name: "FAQs", href: "/faqs" },
@@ -152,7 +152,7 @@ const Footer = () => {
     <footer className="bg-primery text-white relative overflow-hidden">
       {/* Background Pattern */}
       {/* <div className="absolute inset-0 bg-gradient-to-br from-gray-800 via-gray-900 to-black opacity-95"></div> */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -translate-y-32 translate-x-32 blur-3xl"></div>
+      <div className="absolute top-0 right-0 w-64 h-64 bg-primery/5 rounded-full -translate-y-32 translate-x-32 blur-3xl"></div>
       
       <div className="relative z-10">
         {/* Main Footer Content */}
@@ -182,7 +182,7 @@ const Footer = () => {
             <div className="xl:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-8">
               {/* About Us */}
               <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-white border-l-4 border-primary pl-3">
+                <h4 className="text-lg font-semibold text-white border-l-4 border-primery pl-3">
                   {footerSections.about.title}
                 </h4>
                 <ul className="space-y-2">
@@ -190,9 +190,9 @@ const Footer = () => {
                     <li key={index}>
                       <Link 
                         to={link.href}
-                        className="text-gray-300 hover:text-primary transition-all duration-200 transform hover:translate-x-1 flex items-center gap-1 group"
+                        className="text-gray-300 hover:text-white transition-all duration-200 transform hover:translate-x-1 flex items-center gap-1 group"
                       >
-                        <span className="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
+                        <span className="w-1 h-1 bg-primery rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
                         {link.name}
                       </Link>
                     </li>
@@ -202,7 +202,7 @@ const Footer = () => {
 
               {/* Programs */}
               <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-white border-l-4 border-primary pl-3">
+                <h4 className="text-lg font-semibold text-white border-l-4 border-primery pl-3">
                   {footerSections.programs.title}
                 </h4>
                 <ul className="space-y-2">
@@ -213,18 +213,18 @@ const Footer = () => {
                           href={link.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-gray-300 hover:text-primary transition-all duration-200 transform hover:translate-x-1 flex items-center gap-1 group"
+                          className="text-gray-300 hover:text-white transition-all duration-200 transform hover:translate-x-1 flex items-center gap-1 group"
                         >
-                          <span className="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
+                          <span className="w-1 h-1 bg-primery rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
                           {link.name}
                           <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                         </a>
                       ) : (
                         <Link 
                           to={link.href}
-                          className="text-gray-300 hover:text-primary transition-all duration-200 transform hover:translate-x-1 flex items-center gap-1 group"
+                          className="text-gray-300 hover:text-white transition-all duration-200 transform hover:translate-x-1 flex items-center gap-1 group"
                         >
-                          <span className="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
+                          <span className="w-1 h-1 bg-primery rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
                           {link.name}
                         </Link>
                       )}
@@ -235,7 +235,7 @@ const Footer = () => {
 
               {/* Get Involved */}
               <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-white border-l-4 border-primary pl-3">
+                <h4 className="text-lg font-semibold text-white border-l-4 border-primery pl-3">
                   {footerSections.involvement.title}
                 </h4>
                 <ul className="space-y-2">
@@ -246,18 +246,18 @@ const Footer = () => {
                           href={link.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-gray-300 hover:text-primary transition-all duration-200 transform hover:translate-x-1 flex items-center gap-1 group"
+                          className="text-gray-300 hover:text-white transition-all duration-200 transform hover:translate-x-1 flex items-center gap-1 group"
                         >
-                          <span className="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
+                          <span className="w-1 h-1 bg-primery rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
                           {link.name}
                           <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                         </a>
                       ) : (
                         <Link 
                           to={link.href}
-                          className="text-gray-300 hover:text-primary transition-all duration-200 transform hover:translate-x-1 flex items-center gap-1 group"
+                          className="text-gray-300 hover:text-white transition-all duration-200 transform hover:translate-x-1 flex items-center gap-1 group"
                         >
-                          <span className="w-1 h-1 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
+                          <span className="w-1 h-1 bg-primery rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
                           {link.name}
                         </Link>
                       )}
@@ -270,7 +270,7 @@ const Footer = () => {
             {/* Newsletter Signup */}
             <div className="xl:col-span-1 space-y-6">
               <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-white border-l-4 border-primary pl-3">
+                <h4 className="text-lg font-semibold text-white border-l-4 border-primery pl-3">
                   STAY CONNECTED
                 </h4>
                 <p className="text-gray-300 text-sm leading-relaxed">
@@ -287,7 +287,7 @@ const Footer = () => {
                     value={formData.firstName}
                     onChange={handleInputChange}
                     placeholder="First Name"
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary transition-all duration-200"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primery transition-all duration-200"
                     required
                   />
                   <input
@@ -296,7 +296,7 @@ const Footer = () => {
                     value={formData.lastName}
                     onChange={handleInputChange}
                     placeholder="Last Name"
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary transition-all duration-200"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primery transition-all duration-200"
                     required
                   />
                   <input
@@ -305,7 +305,7 @@ const Footer = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     placeholder="Email Address"
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary transition-all duration-200"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primery transition-all duration-200"
                     required
                   />
                 </div>
@@ -316,7 +316,7 @@ const Footer = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-primary to-blue-600 hover:from-blue-600 hover:to-primary text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="w-full bg-gradient-to-r from-primery to-blue-600 hover:from-blue-600 hover:to-primery text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   {isSubmitting ? (
                     <>
@@ -326,7 +326,7 @@ const Footer = () => {
                   ) : (
                     <>
                       <Send className="w-4 h-4" />
-                      SUBSCRIBE
+                      Newsletter
                     </>
                   )}
                 </button>
@@ -360,7 +360,7 @@ const Footer = () => {
             <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
               <div className="text-center lg:text-left">
                 <p className="text-white text-sm">
-                  © Copyright 2025 Engineers Without Borders USA, All Rights Reserved.
+                  © Copyright 2025 Oromo Tech & Innovation Society, All Rights Reserved.
                 
                 </p>
               </div>

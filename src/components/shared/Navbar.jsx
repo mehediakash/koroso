@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import logo from "../../assets/logo/logo.png"
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -29,91 +30,25 @@ const handleLinkClick = () => {
   const menuItems = [
     {
       title: "About Us",
-      items: [
-        [
-          { title: "Mission & Vision", href: "/About-Us" },
-          { title: "Financials", href: "/Financials" },
-          { title: "Our Team", href: "/Our-Team" }
-        ],
-        [
-          { title: "EWB-USA's Commitment to DEI", href: "/EWB-USAs-Commitment-to-DEI" },
-          { title: "FAQs", href: "/FAQs" },
-          { title: "Impactful Investors", href: "/Impactful-Investors" }
-        ]
-      ]
+      
     },
     {
       title: "Our Work",
-      items: [
-        [
-          { title: "Our Approach", href: "/Our-Approach" },
-          { title: "Purposeful Partners", href: "/Purposeful-Partners" },
-          { title: "Where We Work", href: "/Where-We-Work" },
-          { title: "Our Impact", href: "/Our-Impact" },
-          { title: "Education and Knowledge Sharing", href: "/Education-and-Knowledge-Sharing" }
-        ],
-        [
-          { 
-            title: "Our Programs", 
-            href: "/Our-Programs",
-            subItems: [
-              { title: "International Community Program", href: "/International-Community-Program" },
-              { title: "Projects in the United States", href: "/CECorps" },
-              { title: "Engineering Climate Resilience", href: "/Engineering-Climate-Resilience" },
-              { title: "Community Health", href: "/Community-Health" },
-              { title: "Request Engineering Services", href: "/Request-Engineering-Services" }
-            ]
-          }
-        ]
-      ]
+     
     },
     {
       title: "Get Involved",
-      items: [
-        [
-          { title: "Volunteer", href: "/Volunteer" },
-          { title: "Volunteer Registration", href: "/Volunteer-Registration" },
-          { title: "Volunteer Village", href: "https://volunteer.ewb-usa.org/s/", target: "_blank" }
-        ],
-        [
-          { title: "Find a Chapter", href: "/Find-a-Chapter" },
-          { title: "Corporate Partnerships & Employee Engagement", href: "/Corporate-Engagement" }
-        ]
-      ]
+    
     },
     {
       title: "Give",
-      items: [
-        [
-          { title: "Donate Online", href: "/Donate" },
-          { title: "Corporate Engagement", href: "/Corporate-Engagement" }
-        ],
-        [
-          { 
-            title: "Other Ways to Give", 
-            href: "/Other-Ways-to-Give",
-            subItems: [
-              { title: "Legacy Giving", href: "/Legacy-Giving" },
-              { title: "Give Stock", href: "/Stock-Gifts" },
-              { title: "Donor-Advised Fund", href: "/Donor-Advised-Fund" }
-            ]
-          }
-        ]
-      ]
+   
     },
     {
-      title: "Stay Connected",
-      items: [
-        [
-          { title: "News & Stories", href: "/News-Stories" },
-          { title: "The Water Cooler", href: "/The-Water-Cooler" }
-        ],
-        [
-          { title: "Volunteer Village", href: "https://volunteer.ewb-usa.org/", target: "_blank" },
-          { title: "EWB-USA Store", href: "https://www.zazzle.com/store/ewbusa", target: "_blank" },
-          { title: "Contact Us", href: "/Contact-Us" }
-        ]
-      ]
+      href: "/contact", 
+      target: "_blank" ,
+      title: "Contact Us",
+      
     }
   ];
 
@@ -134,16 +69,22 @@ const handleLinkClick = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
-              {menuItems.map((item, index) => (
+              {menuItems?.map((item, index) => (
                 <div key={index} className="relative group">
-                  <button className="text-primery md:text-xl  hover:text-primery font-medium py-2 transition-colors duration-200">
+                   <Link 
+                                to={item.href}
+                             
+                                className="block text-primery hover:text-primery font-medium mb-2 transition-colors duration-200"
+                              >
+                  <button className="text-primery md:text-xl cursor-pointer  hover:text-primery font-medium py-2 transition-colors duration-200">
                     {item.title}
                   </button>
+                  </Link>
                   
                   {/* Mega Menu Dropdown */}
-                  <div className="absolute left-0 mt-2 w-96 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                  {/* <div className="absolute left-0 mt-2 w-96 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                     <div className="p-6 grid grid-cols-2 gap-6">
-                      {item.items.map((column, colIndex) => (
+                      {item?.items?.map((column, colIndex) => (
                         <div key={colIndex}>
                           {column.map((subItem, subIndex) => (
                             <div key={subIndex} className="mb-4 last:mb-0">
@@ -172,7 +113,7 @@ const handleLinkClick = () => {
                         </div>
                       ))}
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               ))}
             </nav>
@@ -189,15 +130,17 @@ const handleLinkClick = () => {
                 </svg>
               </button>
               
-              <a 
-                href="/Volunteer"
+              {/* <a 
+                 target="_blank"
+            href="https://docs.google.com/forms/d/1mKvxfHgPeit87d_Ua86cI2kMbb6FoePejt2pVjBd0P8/viewform"
                 className="px-6 text-lg py-2 border border-primery text-primery rounded-full hover:bg-blue-50 transition-colors duration-200 font-medium"
               >
                 Volunteer
-              </a>
+              </a> */}
               
               <a 
-                href="/Donate"
+               target="_blank"
+            href="https://docs.google.com/forms/d/1mKvxfHgPeit87d_Ua86cI2kMbb6FoePejt2pVjBd0P8/viewform"
                 className="px-6 py-2 text-lg bg-primery text-white rounded-full hover:bg-primery transition-colors duration-200 font-medium"
               >
                 Donate Now
@@ -247,13 +190,13 @@ const handleLinkClick = () => {
     {/* Menu Content */}
     <div className="h-full overflow-y-auto pb-20">
       <div className="px-4 py-6 space-y-6">
-        {menuItems.map((item, index) => (
+        {menuItems?.map((item, index) => (
           <div key={index} className="border-b border-gray-100 pb-4 last:border-b-0">
             <button className="w-full text-left text-gray-800 font-medium text-lg mb-3">
               {item.title}
             </button>
             <div className="space-y-2">
-              {item.items.flat().map((subItem, subIndex) => (
+              {item?.items?.flat()?.map((subItem, subIndex) => (
                 <div key={subIndex}>
                   <a 
                     href={subItem.href}
@@ -288,15 +231,17 @@ const handleLinkClick = () => {
     {/* Mobile Buttons at Bottom */}
     <div className="absolute bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4">
       <div className="flex flex-col space-y-3">
-        <a 
-          href="/Volunteer"
+        {/* <a 
+        target="_blank"
+            href="https://docs.google.com/forms/d/1mKvxfHgPeit87d_Ua86cI2kMbb6FoePejt2pVjBd0P8/viewform"
           className="w-full px-6 py-3 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-50 transition-colors duration-200 font-medium text-center"
           onClick={handleLinkClick}
         >
           Volunteer
-        </a>
+        </a> */}
         <a 
-          href="/Donate"
+          target="_blank"
+            href="https://docs.google.com/forms/d/1mKvxfHgPeit87d_Ua86cI2kMbb6FoePejt2pVjBd0P8/viewform"
           className="w-full px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-200 font-medium text-center"
           onClick={handleLinkClick}
         >

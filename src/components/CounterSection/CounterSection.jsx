@@ -3,10 +3,10 @@ import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
 const stats = [
-  { id: 1, end: 1100, suffix: "+", label: "Successful Projects" },
-  { id: 2, end: 1000, suffix: "+", label: "Community Partnerships" },
-  { id: 3, end: 5, suffix: " Million+", label: "Beneficiaries of Ongoing Projects", isMillion: true },
-  { id: 4, end: 10000, suffix: "+", label: "Volunteers" },
+  { id: 1, end: 1200, suffix: "+", label: "Members & chapters reached" },
+  { id: 2, end: 350, suffix: "+", label: "Students mentored" },
+  { id: 3, end: 90, suffix: " +", label: "Internships & jobs secured", isMillion: true },
+  { id: 4, end: 25, suffix: "+", label: "Scholarships awarded" },
 ];
 
 const CounterSection = () => {
@@ -19,7 +19,7 @@ const CounterSection = () => {
           Impact
         </h2>
         <p className="mt-4 text-base md:text-lg text-gray-200 max-w-3xl mx-auto">
-          Partner with Oromo Tech & Innovation Society on sustainable engineering solutions that equip communities to thrive for generations.
+          Targets & verified results published in our annual report.
         </p>
 
         {/* Stats */}
@@ -37,7 +37,7 @@ const CounterSection = () => {
                   <CountUp end={stat.end} duration={2.5} suffix={stat.suffix} />
                 ) : inView && stat.isMillion ? (
                   <>
-                    <CountUp end={stat.end} duration={2.5} /> Million+
+                    <CountUp end={stat.end} duration={2.5} /> +
                   </>
                 ) : (
                   "0"
@@ -51,7 +51,7 @@ const CounterSection = () => {
         </div>
 
         {/* Buttons */}
-        <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+        {/* <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
           <a
             href="#impact"
             className="px-6 py-3 rounded-full bg-transparent border border-lime-400 text-lime-400 hover:bg-lime-400 hover:text-blue-900 transition-colors duration-300"
@@ -64,7 +64,7 @@ const CounterSection = () => {
           >
             GIVE TO IMPACT
           </a>
-        </div>
+        </div> */}
       </div>
 
       {/* Background pattern optional */}

@@ -31,9 +31,9 @@ const Banner = () => {
         {/* Main Heading */}
         <div className="mb-8">
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-4">
-            <span className="block">Oromo Tech</span>
-            <span className="block">Innovation </span>
-            <span className="block">OTIS </span>
+            <span className="block">Oromo Tech &</span>
+            <span className="block">Innovation Society</span>
+            <span className="block">(OTIS) </span>
           </h1>
         </div>
 
@@ -48,10 +48,11 @@ const Banner = () => {
         {/* CTA Button */}
         <div className="mt-10">
           <a
-            href="/learn-more"
+            target="_blank"
+            href="https://docs.google.com/forms/d/1mKvxfHgPeit87d_Ua86cI2kMbb6FoePejt2pVjBd0P8/viewform"
             className="inline-flex items-center px-8 py-4 border-white border hover:bg-primery text-white font-semibold text-lg rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
-            LEARN MORE
+           Donate Now
             <svg 
               className="ml-2 w-5 h-5" 
               fill="none" 
