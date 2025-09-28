@@ -22,23 +22,23 @@ const Programs = () => {
         {
           icon: <Users className="w-8 h-8" />,
           title: "Mentorship Network",
-          description: "Pairing students with professionals for career navigation, internships, and grad-school prep.",
+          // description: "Pairing students with professionals for career navigation, internships, and grad-school prep.",
           gradient: "from-blue-500 to-cyan-500",
-          features: ["1-on-1 Mentoring", "Internship Support", "Grad School Prep"]
+          features: ["1-on-1 Guidance", "Internship Prep", "Much More"]
         },
         {
           icon: <Trophy className="w-8 h-8" />,
           title: "Scholarships",
-          description: "Seed funding for high-school & college students, FAFSA help, and application coaching.",
+          // description: "Seed funding for high-school & college students, FAFSA help, and application coaching.",
           gradient: "from-green-500 to-emerald-500",
-          features: ["Financial Aid", "Application Coaching", "FAFSA Assistance"]
+          features: ["Seed Funding", "Application Coaching", "FAFSA Support"]
         },
         {
           icon: <TrendingUp className="w-8 h-8" />,
           title: "Leadership Academy",
-          description: "Public speaking, leadership, and entrepreneurship tracks for youth and early career.",
+          // description: "Public speaking, leadership, and entrepreneurship tracks for youth and early career.",
           gradient: "from-purple-500 to-pink-500",
-          features: ["Public Speaking", "Entrepreneurship", "Leadership Skills"]
+          features: ["Entrepreneurship", "Leadership Skills", "Public Speaking "]
         }
       ]
     },
@@ -49,21 +49,21 @@ const Programs = () => {
         {
           icon: <Users className="w-8 h-8" />,
           title: "Career Fair & Recruiting",
-          description: "Company partners recruit Oromo students and professionals at OTIS events.",
+          // description: "Company partners recruit Oromo students and professionals at OTIS events.",
           gradient: "from-orange-500 to-red-500",
-          features: ["Networking Events", "Company Partnerships", "Job Opportunities"]
+          features: ["Networking Events", "Partnerships", "Job Opportunities"]
         },
         {
           icon: <Calendar className="w-8 h-8" />,
           title: "Industry Nights",
-          description: "Quarterly panels with leaders across tech, healthcare, business, and education.",
+          // description: "Quarterly panels with leaders across tech, healthcare, business, and education.",
           gradient: "from-indigo-500 to-blue-500",
-          features: ["Expert Panels", "Industry Insights", "Quarterly Events"]
+          features: ["Expert Panels", "Industry Insights", "Professional Networking"]
         },
         {
           icon: <TrendingUp className="w-8 h-8" />,
           title: "Professional Development",
-          description: "Workshops on interviewing, portfolio, leadership, and navigating promotion.",
+          // description: "Workshops on interviewing, portfolio, leadership, and navigating promotion.",
           gradient: "from-amber-500 to-yellow-500",
           features: ["Interview Prep", "Career Growth", "Skill Building"]
         }
@@ -76,30 +76,30 @@ const Programs = () => {
         {
           icon: <Cpu className="w-8 h-8" />,
           title: "AI & Technology Workshops",
-          description: "Intro to AI, data, cloud, and cybersecurity — in plain English and Afaan Oromo.",
+          // description: "Intro to AI, data, cloud, and cybersecurity — in plain English and Afaan Oromo.",
           gradient: "from-teal-500 to-cyan-500",
-          features: ["AI Education", "Tech Skills", "Bilingual Content"]
+          features: ["AI", " Data & Cloud", "Cybersecurity (English & Afaan Oromo)"]
         },
         {
           icon: <Code2 className="w-8 h-8" />,
           title: "Hack for Community",
-          description: "Weekend hackathons building real tools for language, jobs, and services.",
+          // description: "Weekend hackathons building real tools for language, jobs, and services.",
           gradient: "from-violet-500 to-purple-500",
-          features: ["Hackathons", "Community Tools", "Real Projects"]
+          features: ["Hackathons", "Innovation Challenges", "Tools that Make a Difference"]
         },
         {
           icon: <HeartPulse className="w-8 h-8" />,
           title: "Community Wellness",
-          description: "Mental health awareness and culturally-competent care navigation resources.",
+          // description: "Mental health awareness and culturally-competent care navigation resources.",
           gradient: "from-rose-500 to-pink-500",
-          features: ["Mental Health", "Cultural Care", "Wellness Resources"]
+          features: ["Mental Health", "Cultural Care Navigation", "Awareness Resources"]
         }
       ]
     }
   ];
 
   return (
-    <section id="programs" className="relative py-20 lg:py-28 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900/20">
+    <section id="programs" className="relative py-20 lg:py-28 bg-primery dark:from-gray-900 dark:via-gray-800 dark:to-blue-900/20">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-blue-200/20 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl dark:bg-blue-900/20"></div>
       {/* <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-200/20 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl dark:bg-purple-900/20"></div> */}
@@ -107,14 +107,14 @@ const Programs = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primery/10 text-primery dark:bg-primery/20 mb-4">
-            <Sparkles className="w-4 h-4" />
-            <span className="text-sm font-medium">Our Programs</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green mb-4">
+            <Sparkles className="w-4 h-4 text-white"  />
+            <span className="text-sm font-medium text-white">Our Programs</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Empowering Through <span className="text-transparent bg-clip-text bg-gradient-to-r from-primery to-primery">Innovative Programs</span>
+          <h2 className="text-4xl lg:text-5xl font-bold text-white dark:text-white mb-4">
+            Empowering Through <span className=" text-white bg-clip-text bg-gradient-to-r from-primery to-primery">Innovative Programs</span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+          <p className="text-lg text-white dark:text-gray-300 leading-relaxed">
             Comprehensive programs designed to support students, professionals, and community members 
             at every stage of their journey with cutting-edge technology and cultural relevance.
           </p>
@@ -131,10 +131,10 @@ const Programs = () => {
             >
               {/* Group Header */}
               <div className="flex items-center gap-4 mb-8 lg:mb-12">
-                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-r from-primery to-primery text-white shadow-lg">
+                <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-green text-white shadow-lg">
                   {group.icon}
                 </div>
-                <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white">
+                <h3 className="text-2xl lg:text-3xl font-bold text-white dark:text-white">
                   {group.title}
                 </h3>
                 <div className="flex-1 h-px bg-gradient-to-r from-primery/20 to-transparent ml-4"></div>

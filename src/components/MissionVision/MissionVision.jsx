@@ -17,7 +17,7 @@ const MissionVision = () => {
    
   ];
   return (
-  <section className="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-dark">
+  <section className="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-br  dark:from-gray-900 dark:to-dark">
       {/* Background decorative elements */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-primery/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-prito-primery/5 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl"></div>
@@ -65,7 +65,7 @@ const MissionVision = () => {
                           <Star key={i} className="w-4 h-4 fill-current" />
                         ))}
                       </div>
-                      <span className="text-sm font-semibold text-gray-900 dark:text-white">4.9/5 Top</span>
+                      <span className="text-sm font-semibold text-green dark:text-red">4.9/5 Top</span>
                     </div>
                   </div>
                 </div>
@@ -74,8 +74,8 @@ const MissionVision = () => {
               {/* Decorative element */}
               <div className="absolute -z-10 -bottom-8 -right-8">
                 <div className="relative w-40 h-40">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primery to-primery rounded-full opacity-10 animate-pulse"></div>
-                  <div className="absolute inset-4 bg-gradient-to-r from-primery to-primery rounded-full opacity-5 animate-pulse delay-75"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-green to-green rounded-full opacity-10 animate-pulse"></div>
+                  <div className="absolute inset-4 bg-gradient-to-r from-green to-green rounded-full opacity-5 animate-pulse delay-75"></div>
                 </div>
               </div>
             </div>
@@ -84,14 +84,14 @@ const MissionVision = () => {
           {/* Content Section */}
           <div className="w-full lg:w-1/2">
             <div className="max-w-lg">
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium bg-primery/10 text-primery dark:bg-primery/20 mb-4">
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm text-white font-medium bg-green  dark:bg-green/20 mb-4">
                 <CheckCircle className="w-4 h-4" />
                 Mission & Vision
               </span>
               
            
               
-              <h2 className="text-lg font-bold  text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+              <h2 className="text-lg font-bold  text-white dark:text-gray-300 mb-8 leading-relaxed">
                 To empower Oromo students, professionals, and communities to learn, lead, and thrive in the modern world advancing in emerging industries, building strong networks, driving entrepreneurship, pursuing leadership in public service, and collectively uplifting one another through knowledge, opportunity, and service.
               </h2>
               
@@ -99,19 +99,19 @@ const MissionVision = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-start gap-3 group">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primery/10 dark:bg-primery/20 flex items-center justify-center text-primery group-hover:scale-110 transition-transform duration-200">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-red dark:bg-primery/20 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-200">
                       {feature.icon}
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{feature.title}</h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">{feature.description}</p>
+                      <h3 className="font-semibold text-white dark:text-white mb-1">{feature.title}</h3>
+                      <p className="text-sm text-white dark:text-gray-400">{feature.description}</p>
                     </div>
                   </div>
                 ))}
               </div>
               
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
+              {/* <div className="flex flex-col sm:flex-row gap-4">
                 <button className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primery hover:bg-primery/90 text-white font-medium rounded-lg transition-colors duration-200 shadow-lg shadow-primery/25">
                   Get Started
                   <ArrowRight className="w-4 h-4" />
@@ -119,7 +119,7 @@ const MissionVision = () => {
                 <button className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-900 dark:text-white font-medium rounded-lg transition-colors duration-200 border border-gray-200 dark:border-gray-700 shadow">
                   Learn More
                 </button>
-              </div>
+              </div> */}
            
             </div>
           </div>

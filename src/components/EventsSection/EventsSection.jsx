@@ -50,14 +50,14 @@ const EventsSection = () => {
   return (
     <section
       id="events"
-      className="relative bg-gradient-to-b from-white to-blue-50 py-16 px-4"
+      className="relative bg-primery from-white to-blue-50 py-16 px-4"
       aria-labelledby="events-title"
     >
       <div className="max-w-6xl mx-auto">
         {/* Title */}
         <h2
           id="events-title"
-          className="text-3xl md:text-4xl font-extrabold text-center text-gray-800 tracking-tight"
+          className="text-3xl md:text-4xl font-extrabold text-center text-white tracking-tight"
         >
           Flagship Events
         </h2>
@@ -69,7 +69,7 @@ const EventsSection = () => {
               key={index}
               className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-start transform hover:-translate-y-1 hover:shadow-2xl transition duration-500"
             >
-              <h4 className="text-xl font-semibold text-blue-700">
+              <h4 className="text-xl font-semibold text-green">
                 {event.title}
               </h4>
               <p className="mt-2 text-gray-600 text-sm md:text-base">
@@ -81,7 +81,7 @@ const EventsSection = () => {
 
         {/* Testimonials */}
         <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold text-gray-800">
+          <h3 className="text-2xl font-bold text-white">
             What Partners &amp; Members Say
           </h3>
 
@@ -93,10 +93,10 @@ const EventsSection = () => {
                   index === current ? "opacity-100" : "opacity-0 absolute inset-0"
                 }`}
               >
-                <p className="text-lg md:text-xl text-gray-700 italic">
+                <p className="text-lg md:text-xl text-white italic">
                   {t.quote}
                 </p>
-                <span className="mt-3 block text-sm md:text-base text-gray-500">
+                <span className="mt-3 block text-sm md:text-base text-white">
                   {t.author}
                 </span>
               </div>
@@ -110,7 +110,7 @@ const EventsSection = () => {
                   onClick={() => setCurrent(index)}
                   aria-label={`Go to testimonial ${index + 1}`}
                   className={`h-3 w-3 rounded-full transition-colors duration-300 ${
-                    current === index ? "bg-blue-600" : "bg-gray-300"
+                    current === index ? "bg-red" : "bg-gray-300"
                   }`}
                 />
               ))}

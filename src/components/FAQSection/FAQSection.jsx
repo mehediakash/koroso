@@ -2,32 +2,48 @@ import React, { useState } from "react";
 
 const faqs = [
   {
-    question: "How can universities partner with OTIS?",
+    question: "How can I join OTIS as a student?",
     answer:
-      "Co-host events, provide internship pathways, and sponsor scholarships or research opportunities.",
+      "Use the Join form to connect with programs, mentors, and events.",
+  },
+  {
+    question: "Can professionals get involved?",
+    answer:
+      "Yes—mentor, join panels, or partner on recruiting and projects. ",
   },
   {
     question: "How do companies sponsor or recruit?",
     answer:
-      "Select a tier above, host panels, and participate in our Summit career fair. We’ll match you with talent.",
+      "Contact us via Partnerships/Contact to collaborate on recruiting and sponsorship. ",
   },
   {
-    question: "Are donations tax-deductible?",
+    question: "Is OTIS only for Oromo people?",
     answer:
-      "We’re incorporating in Minnesota and pursuing 501(c)(3). We’ll share status updates in our sponsor packet.",
+      "No—centered on Oromo community, welcoming to all allies and collaborators.",
   },
   {
-    question: "Can I start a chapter?",
+    question: "How can I start a local chapter? ",
+    answer:
+      " Submit an interest form; we’ll share guidelines upon approval.",
+  },
+  {
+    question: "What programs does OTIS offer?  ",
+    answer:
+      " Mentorship, scholarships, leadership, career fairs, tech workshops, hackathons, wellness. ",
+  },
+  {
+    question: "How do I volunteer or mentor?",
     answer: (
       <>
-        Yes — we offer a starter kit, training, and ongoing support. Email{" "}
+         Use the Join form and select your interest; we’ll follow up. 
+
         <a
-          href="mailto:otisociety+chapters@gmail.com"
-          className="text-blue-600 hover:underline"
-        >
-          otisociety+chapters@gmail.com
+          href="mailto:info@otis.org"
+          className="text-green hover:underline"
+        >{" "}
+           info@otis.org
         </a>
-        .
+        
       </>
     ),
   },
@@ -41,18 +57,18 @@ export default function FAQSection() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const displayedFaqs = showAll ? faqs : faqs.slice(0, 3);
+  const displayedFaqs = showAll ? faqs : faqs.slice(0, 5);
 
   return (
     <section
       id="faq"
-      className="py-16 bg-gradient-to-b from-gray-50 to-white"
+      className="py-16 bg-primery from-gray-50 to-white"
       aria-labelledby="faq-title"
     >
       <div className="max-w-5xl mx-auto px-6">
         <h2
           id="faq-title"
-          className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-10"
+          className="text-3xl sm:text-4xl font-bold text-center text-white mb-10"
         >
           FAQs
         </h2>
@@ -68,13 +84,13 @@ export default function FAQSection() {
                 className="w-full flex justify-between items-center text-left px-6 py-4 focus:outline-none"
                 aria-expanded={openIndex === index}
               >
-                <span className="text-lg font-medium text-gray-800">
+                <span className="text-lg font-medium text-white">
                   {item.question}
                 </span>
                 <span
                   className={`transform transition-transform duration-300 ${
                     openIndex === index ? "rotate-45" : "rotate-0"
-                  } text-2xl text-gray-500`}
+                  } text-2xl text-white`}
                 >
                   +
                 </span>
@@ -84,7 +100,7 @@ export default function FAQSection() {
                   openIndex === index ? "max-h-40" : "max-h-0"
                 }`}
               >
-                <div className="px-6 pb-4 text-gray-600 text-base">
+                <div className="px-6 pb-4 text-white text-base">
                   {item.answer}
                 </div>
               </div>
@@ -96,7 +112,7 @@ export default function FAQSection() {
           <div className="text-center mt-8">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-md"
+              className="px-6 py-2 bg-red text-white rounded-lg hover:bg-red transition-colors duration-300 shadow-md"
             >
               {showAll ? "Show Less" : "Show More"}
             </button>

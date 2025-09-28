@@ -3,22 +3,22 @@ import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
 const stats = [
-  { id: 1, end: 1200, suffix: "+", label: "Members & chapters reached" },
-  { id: 2, end: 350, suffix: "+", label: "Students mentored" },
-  { id: 3, end: 90, suffix: " +", label: "Internships & jobs secured", isMillion: true },
-  { id: 4, end: 25, suffix: "+", label: "Scholarships awarded" },
+  { id: 1, end: 3, suffix: "+ Pilot", label: " Programs Launched" },
+  { id: 2, end: 15, suffix: "+ Active", label: "Students mentored" },
+  { id: 3, end: 2, suffix: " +", label: "University Collaborations ", isMillion: true },
+  { id: 4, end: 120, suffix: "+", label: "Community Members Engaged" },
 ];
 
 const CounterSection = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
   return (
-    <section className="relative z-10 bg-blue-900 text-white py-16 px-4">
+    <section className="relative z-10 bg-primery text-white py-16 px-4">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-lime-400">
+        <h2 className="text-3xl md:text-4xl font-bold text-red">
           Impact
         </h2>
-        <p className="mt-4 text-base md:text-lg text-gray-200 max-w-3xl mx-auto">
+        <p className="mt-4 text-base md:text-lg text-white max-w-3xl mx-auto">
           Targets & verified results published in our annual report.
         </p>
 
@@ -30,7 +30,7 @@ const CounterSection = () => {
           {stats.map((stat) => (
             <div
               key={stat.id}
-              className="flex flex-col items-center bg-blue-800 rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-500"
+              className="flex flex-col items-center bg-primery rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-500"
             >
               <div className="text-3xl md:text-4xl font-extrabold text-white">
                 {inView && !stat.isMillion ? (
@@ -68,7 +68,7 @@ const CounterSection = () => {
       </div>
 
       {/* Background pattern optional */}
-      <div className="absolute -z-1 inset-0 bg-[url('https://ewb-usa.org/images/pattern-bg.svg')] opacity-65" />
+      <div className="absolute -z-1 inset-0 bg-[url('https://ewb-usa.org/images/pattern-bg.svg')] opacity-50" />
     </section>
   );
 };

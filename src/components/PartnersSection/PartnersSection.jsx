@@ -12,18 +12,18 @@ const PartnersSection = () => {
   return (
     <section
       id="partners"
-      className="relative bg-gradient-to-b from-blue-50 via-white to-blue-50 py-16 px-4"
+      className="relative bg-primery from-blue-50 via-white to-blue-50 py-16 px-4"
       aria-labelledby="partners-title"
     >
       <div className="max-w-6xl mx-auto text-center">
         {/* Heading */}
         <h2
           id="partners-title"
-          className="text-3xl md:text-4xl font-extrabold text-gray-800 tracking-tight"
+          className="text-3xl md:text-4xl font-extrabold text-white tracking-tight"
         >
           Partners &amp; Sponsors
         </h2>
-        <p className="mt-4 text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        <p className="mt-4 text-base md:text-lg text-white max-w-3xl mx-auto leading-relaxed">
           Progressive corporate, government, nonprofit, and higher education
           partners have been vital to OTIS’s mission. We collaborate with
           organizations that value diversity, equity, and inclusion — and
@@ -48,15 +48,15 @@ const PartnersSection = () => {
           </div>
 
           {/* Gradient fade edges */}
-          <div className="pointer-events-none absolute top-0 left-0 h-full w-16 bg-gradient-to-r from-blue-50 via-white/70 to-transparent" />
-          <div className="pointer-events-none absolute top-0 right-0 h-full w-16 bg-gradient-to-l from-blue-50 via-white/70 to-transparent" />
+          <div className="pointer-events-none absolute top-0 left-0 h-full w-16 bg-gradient-to-r from-primery via-primery/70 to-transparent" />
+          <div className="pointer-events-none absolute top-0 right-0 h-full w-16 bg-gradient-to-l from-primery via-primery/70 to-transparent" />
         </div>
 
         {/* CTA */}
         <div className="mt-12">
           <a
             href="mailto:otisociety+partners@gmail.com?subject=Partner%20with%20OTIS"
-            className="inline-block px-8 py-3 bg-primery text-white rounded-full shadow-lg hover:scale-105 hover:bg-primery transition-transform duration-300"
+            className="inline-block px-8 py-3 bg-red text-white rounded-full shadow-lg hover:scale-105 hover:bg-red transition-transform duration-300"
           >
             Email Partnerships
           </a>

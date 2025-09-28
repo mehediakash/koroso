@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import logo from "../../assets/logo/logo.png"
+import logo from "../../assets/logo/logo-white.png"
 import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -29,25 +29,31 @@ const handleLinkClick = () => {
 
   const menuItems = [
     {
+      href: "#About_Us", 
       title: "About Us",
       
     },
     {
-      title: "Our Work",
+      href: "#Programs", 
+      title: "Programs",
      
     },
     {
+      href: "#Get_Involved", 
       title: "Get Involved",
     
     },
-    {
-      title: "Give",
    
-    },
     {
       href: "/contact", 
       target: "_blank" ,
-      title: "Contact Us",
+      title: "Contact",
+      
+    },
+    {
+      href: "#FAQ", 
+      target: "_blank" ,
+      title: "FAQ",
       
     }
   ];
@@ -55,7 +61,7 @@ const handleLinkClick = () => {
   return (
     <>
       {/* Sticky Navbar */}
-      <header className={`w-full bg-white transition-all py-5 duration-300 ${isSticky ? 'fixed top-0 shadow-lg z-50' : 'relative'}`}>
+      <header className={`w-full bg-primery transition-all py-5 duration-300 ${isSticky ? 'fixed top-0 shadow-lg z-50' : 'relative'}`}>
         <div className=" mx-auto px-4 sm:px-6 lg:px-28">
           <div className="flex items-center justify-between h-20">
             
@@ -74,9 +80,9 @@ const handleLinkClick = () => {
                    <Link 
                                 to={item.href}
                              
-                                className="block text-primery hover:text-primery font-medium mb-2 transition-colors duration-200"
+                                className="block font-Poppins text-white hover:text-white font-medium mb-2 transition-colors duration-200"
                               >
-                  <button className="text-primery md:text-xl cursor-pointer  hover:text-primery font-medium py-2 transition-colors duration-200">
+                  <button className="text-white md:text-xl cursor-pointer  hover:text-white font-medium py-2 transition-colors duration-200">
                     {item.title}
                   </button>
                   </Link>
@@ -140,8 +146,8 @@ const handleLinkClick = () => {
               
               <a 
                target="_blank"
-            href="https://docs.google.com/forms/d/1mKvxfHgPeit87d_Ua86cI2kMbb6FoePejt2pVjBd0P8/viewform"
-                className="px-6 py-2 text-lg bg-primery text-white rounded-full hover:bg-primery transition-colors duration-200 font-medium"
+            href="https://stripe.com/"
+                className="px-6 py-2 text-lg  bg-primery text-white rounded-full border-red border hover:bg-red transition-colors duration-200 font-medium"
               >
                 Donate Now
               </a>
@@ -150,11 +156,11 @@ const handleLinkClick = () => {
 </div>
             {/* Mobile Menu Button */}
           <button 
-  className="lg:hidden relative z-60 flex flex-col items-center justify-center w-10 h-10"
+  className="lg:hidden relative text-white z-60 flex flex-col items-center justify-center w-10 h-10"
   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
   aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
 >
-  <span className={`w-6 h-0.5 bg-gray-700 transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+  <span className={`w-6 h-0.5   bg-gray-700 transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
   <span className={`w-6 h-0.5 bg-gray-700 my-1.5 transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
   <span className={`w-6 h-0.5 bg-gray-700 transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
 </button>
@@ -229,7 +235,7 @@ const handleLinkClick = () => {
     </div>
 
     {/* Mobile Buttons at Bottom */}
-    <div className="absolute bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4">
+    <div className="absolute bottom-0 left-0 right-0 bg-white border-t border-white p-4">
       <div className="flex flex-col space-y-3">
         {/* <a 
         target="_blank"
@@ -242,7 +248,7 @@ const handleLinkClick = () => {
         <a 
           target="_blank"
             href="https://docs.google.com/forms/d/1mKvxfHgPeit87d_Ua86cI2kMbb6FoePejt2pVjBd0P8/viewform"
-          className="w-full px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-200 font-medium text-center"
+          className="w-full px-6 py-3 bg-white text-white rounded-full hover:bg-blue-700 transition-colors duration-200 font-medium text-center"
           onClick={handleLinkClick}
         >
           Donate Now

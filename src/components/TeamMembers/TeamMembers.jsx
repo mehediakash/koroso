@@ -71,22 +71,22 @@ const TeamMembers = () => {
   );
 
   return (
-    <section className="relative py-20 lg:py-28 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900/20 overflow-hidden">
+    <section className="relative py-20 lg:py-28 bg-primery from-gray-50 via-white to-blue-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900/20 overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-purple-200/20 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl dark:bg-purple-900/20"></div>
+      {/* <div className="absolute top-0 left-0 w-72 h-72 bg-purple-200/20 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl dark:bg-purple-900/20"></div> */}
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-200/20 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl dark:bg-blue-900/20"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primery/10 text-primery dark:bg-primery/20 mb-4">
-            <Award className="w-4 h-4" />
-            <span className="text-sm font-medium">Meet Our Team</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green mb-4">
+            <Award className="w-4 h-4 text-white" />
+            <span className="text-sm font-medium text-white">Meet Our Team</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Executive <span className="text-transparent bg-clip-text bg-gradient-to-r from-primery to-primery">Leadership</span>
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+            Executive <span className="text-transparent bg-clip-text bg-gradient-to-r from-red to-red">Leadership</span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+          <p className="text-lg  text-white leading-relaxed">
             Dedicated students leading with passion and vision. Get to know the talented individuals 
             driving our organization forward.
           </p>

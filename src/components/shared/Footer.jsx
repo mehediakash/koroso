@@ -30,20 +30,20 @@ const Footer = () => {
             <div className="flex items-start gap-3">
               <MapPin className="w-5 h-5 text-primery mt-0.5 flex-shrink-0" />
               <div>
-                <p className="text-white">1031 33rd Street</p>
-                <p className="text-white">Denver, Colorado 80205</p>
+                <p className="text-white">300 Washington Ave, </p>
+                <p className="text-white">Minneapolis, MN</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
               <Phone className="w-5 h-5 text-primery flex-shrink-0" />
               <a href="tel:3037722723" className="text-white hover:text-white transition-colors duration-200">
-                303-772-2723
+                612-442-2126
               </a>
             </div>
             <div className="flex items-center gap-3">
               <Mail className="w-5 h-5 text-primery flex-shrink-0" />
-              <a href="mailto:info@OTIS.org" className="text-white hover:text-white transition-colors duration-200">
-                info@OTIS.org
+              <a href="mailto:info@otis.org" className="text-white hover:text-white transition-colors duration-200">
+                info@otis.org 
               </a>
             </div>
           </div>
@@ -68,21 +68,21 @@ const Footer = () => {
     programs: {
       title: "PROGRAMS",
       links: [
-        { name: "International Community Program", href: "/international-program" },
-        { name: "Community Engineering Corps", href: "https://www.communityengineeringcorps.org", external: true },
-        { name: "Engineering Climate Resilience", href: "/climate-resilience" },
-        { name: "Community Health", href: "/community-health" },
-        { name: "Request Engineering Services", href: "/request-services" }
+        { name: "International Community Program", href: "#" },
+        { name: "Community Engineering Corps", href: "#", external: true },
+        { name: "Engineering Climate Resilience", href: "#" },
+        { name: "Community Health", href: "#" },
+        { name: "Request Engineering Services", href: "#" }
       ]
     },
     involvement: {
       title: "GET INVOLVED",
       links: [
         { name: "Volunteer", href: "/volunteer" },
-        { name: "Volunteer Registration", href: "/volunteer-registration" },
-        { name: "Volunteer Village", href: "https://volunteer.OTIS.org", external: true },
-        { name: "Find a Chapter", href: "/find-chapter" },
-        { name: "Corporate Engagement", href: "/corporate-engagement" }
+        { name: "Volunteer Registration", href: "#" },
+        { name: "Volunteer Village", href: "#", external: true },
+        { name: "Find a Chapter", href: "#" },
+        { name: "Corporate Engagement", href: "#" }
       ]
     }
   };
@@ -90,20 +90,26 @@ const Footer = () => {
   const socialLinks = [
     {
       name: "LinkedIn",
-      href: "https://www.linkedin.com/company/OTIS",
+      href: "https://www.linkedin.com/",
       icon: "linkedin",
       color: "hover:text-blue-400"
     },
     {
       name: "YouTube",
-      href: "https://www.youtube.com/channel/UCQV_s3TIzi3XuD6amswmiLw",
+      href: "https://www.youtube.com/",
       icon: "youtube",
       color: "hover:text-red-400"
     },
     {
       name: "Instagram",
-      href: "https://www.instagram.com/ewbusa/",
+      href: "https://www.instagram.com/",
       icon: "instagram",
+      color: "hover:text-pink-400"
+    },
+    {
+      name: "TikTok",
+      href: "https://www.tiktok.com/",
+      icon: "tiktok",
       color: "hover:text-pink-400"
     }
   ];
@@ -143,6 +149,12 @@ const Footer = () => {
         <svg className={className} fill="currentColor" viewBox="0 0 24 24">
           <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987s11.987-5.367 11.987-11.987C24.014 5.367 18.647.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.25 14.816 3.76 13.665 3.76 12.368s.49-2.448 1.366-3.323c.875-.807 2.026-1.297 3.323-1.297s2.448.49 3.323 1.297c.875.875 1.366 2.026 1.366 3.323s-.491 2.448-1.366 3.323c-.875.807-2.026 1.297-3.323 1.297zm8.062-10.966c-.49 0-.875-.385-.875-.875s.385-.875.875-.875.875.385.875.875-.385.875-.875.875zm1.95 10.966c-1.366 0-2.448-1.082-2.448-2.448v-6.104c0-1.366 1.082-2.448 2.448-2.448h6.104c1.366 0 2.448 1.082 2.448 2.448v6.104c0 1.366-1.082 2.448-2.448 2.448h-6.104z"/>
         </svg>
+      ),
+      tiktok: (
+        <svg className={className} xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" version="1.1">
+<title>tiktok</title>
+<path d="M16.656 1.029c1.637-0.025 3.262-0.012 4.886-0.025 0.054 2.031 0.878 3.859 2.189 5.213l-0.002-0.002c1.411 1.271 3.247 2.095 5.271 2.235l0.028 0.002v5.036c-1.912-0.048-3.71-0.489-5.331-1.247l0.082 0.034c-0.784-0.377-1.447-0.764-2.077-1.196l0.052 0.034c-0.012 3.649 0.012 7.298-0.025 10.934-0.103 1.853-0.719 3.543-1.707 4.954l0.020-0.031c-1.652 2.366-4.328 3.919-7.371 4.011l-0.014 0c-0.123 0.006-0.268 0.009-0.414 0.009-1.73 0-3.347-0.482-4.725-1.319l0.040 0.023c-2.508-1.509-4.238-4.091-4.558-7.094l-0.004-0.041c-0.025-0.625-0.037-1.25-0.012-1.862 0.49-4.779 4.494-8.476 9.361-8.476 0.547 0 1.083 0.047 1.604 0.136l-0.056-0.008c0.025 1.849-0.050 3.699-0.050 5.548-0.423-0.153-0.911-0.242-1.42-0.242-1.868 0-3.457 1.194-4.045 2.861l-0.009 0.030c-0.133 0.427-0.21 0.918-0.21 1.426 0 0.206 0.013 0.41 0.037 0.61l-0.002-0.024c0.332 2.046 2.086 3.59 4.201 3.59 0.061 0 0.121-0.001 0.181-0.004l-0.009 0c1.463-0.044 2.733-0.831 3.451-1.994l0.010-0.018c0.267-0.372 0.45-0.822 0.511-1.311l0.001-0.014c0.125-2.237 0.075-4.461 0.087-6.698 0.012-5.036-0.012-10.060 0.025-15.083z"/>
+</svg>
       )
     };
     return icons[icon] || null;
@@ -283,22 +295,14 @@ const Footer = () => {
                 <div className="space-y-3">
                   <input
                     type="text"
-                    name="firstName"
+                    name="Name"
                     value={formData.firstName}
                     onChange={handleInputChange}
-                    placeholder="First Name"
+                    placeholder="Enter your Name"
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primery transition-all duration-200"
                     required
                   />
-                  <input
-                    type="text"
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleInputChange}
-                    placeholder="Last Name"
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primery transition-all duration-200"
-                    required
-                  />
+                  
                   <input
                     type="email"
                     name="email"
@@ -316,7 +320,7 @@ const Footer = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-primery to-blue-600 hover:from-blue-600 hover:to-primery text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="w-full bg-red to-blue-600 hover:from-blue-600 hover:to-primery text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   {isSubmitting ? (
                     <>
