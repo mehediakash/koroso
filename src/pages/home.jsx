@@ -8,10 +8,22 @@ import EventsSection from '../components/EventsSection/EventsSection'
 import FAQSection from '../components/FAQSection/FAQSection'
 import JoinSection from '../components/JoinSection/JoinSection'
 import TeamMembers from '../components/TeamMembers/TeamMembers'
+import { Helmet } from 'react-helmet'
 
 const home = () => {
   return (
     <>
+     <Helmet>
+        <title>OTIS | Home</title>
+        <meta
+          name="description"
+          content="OTIS connects students, professionals, and organizations through mentorship, events, and community programs."
+        />
+        <meta
+          name="keywords"
+          content="OTIS, Oromo Tech, mentorship, events, community, summit, hackathon"
+        />
+      </Helmet>
     <Banner/>
     <MissionVision/>
     <Programs/>
