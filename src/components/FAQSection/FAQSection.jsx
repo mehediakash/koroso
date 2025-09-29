@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const faqs = [
   {
@@ -9,12 +10,12 @@ const faqs = [
   {
     question: "Can professionals get involved?",
     answer:
-      "Yes—mentor, join panels, or partner on recruiting and projects. ",
+      "Yes—mentor, join panels, or partner on recruiting and projects.",
   },
   {
     question: "How do companies sponsor or recruit?",
     answer:
-      "Contact us via Partnerships/Contact to collaborate on recruiting and sponsorship. ",
+      "Contact us via Partnerships/Contact to collaborate on recruiting and sponsorship.",
   },
   {
     question: "Is OTIS only for Oromo people?",
@@ -22,28 +23,23 @@ const faqs = [
       "No—centered on Oromo community, welcoming to all allies and collaborators.",
   },
   {
-    question: "How can I start a local chapter? ",
+    question: "How can I start a local chapter?",
     answer:
-      " Submit an interest form; we’ll share guidelines upon approval.",
+      "Submit an interest form; we’ll share guidelines upon approval.",
   },
   {
-    question: "What programs does OTIS offer?  ",
+    question: "What programs does OTIS offer?",
     answer:
-      " Mentorship, scholarships, leadership, career fairs, tech workshops, hackathons, wellness. ",
+      "Mentorship, scholarships, leadership, career fairs, tech workshops, hackathons, wellness.",
   },
   {
     question: "How do I volunteer or mentor?",
     answer: (
       <>
-         Use the Join form and select your interest; we’ll follow up. 
-
-        <a
-          href="mailto:info@otis.org"
-          className="text-green hover:underline"
-        >{" "}
-           info@otis.org
+        Use the Join form and select your interest; we’ll follow up.{" "}
+        <a href="mailto:info@otis.org" className="text-green hover:underline">
+          info@otis.org
         </a>
-        
       </>
     ),
   },
@@ -59,10 +55,21 @@ export default function FAQSection() {
 
   const displayedFaqs = showAll ? faqs : faqs.slice(0, 5);
 
+  // Framer Motion variants for FAQ cards
+  const faqVariants = {
+    hidden: { opacity: 0, y: 40, rotate: -1 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      rotate: 0,
+      transition: { delay: i * 0.1, duration: 0.6, ease: "easeOut" },
+    }),
+  };
+
   return (
     <section
-      id="faq"
-      className="py-16 bg-primery from-gray-50 to-white"
+      id="FAQ"
+      className="py-28 bg-primery scroll-mt-24 from-gray-50 to-white"
       aria-labelledby="faq-title"
     >
       <div className="max-w-5xl mx-auto px-6">
@@ -75,8 +82,13 @@ export default function FAQSection() {
 
         <div className="space-y-4">
           {displayedFaqs.map((item, index) => (
-            <div
+            <motion.div
               key={index}
+              custom={index}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={faqVariants}
               className="border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
             >
               <button
@@ -100,11 +112,9 @@ export default function FAQSection() {
                   openIndex === index ? "max-h-40" : "max-h-0"
                 }`}
               >
-                <div className="px-6 pb-4 text-white text-base">
-                  {item.answer}
-                </div>
+                <div className="px-6 pb-4 text-white text-base">{item.answer}</div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 

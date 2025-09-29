@@ -11,8 +11,8 @@ const logos = [
 const PartnersSection = () => {
   return (
     <section
-      id="partners"
-      className="relative bg-primery from-blue-50 via-white to-blue-50 py-16 px-4"
+      id="Partners"
+      className="relative scroll-mt-24 bg-primery from-blue-50 via-white to-blue-50 py-16 px-4"
       aria-labelledby="partners-title"
     >
       <div className="max-w-6xl mx-auto text-center">

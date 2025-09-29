@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const events = [
   {
@@ -47,10 +48,26 @@ const EventsSection = () => {
     return () => clearInterval(timer);
   }, []);
 
+  // Framer Motion variants
+  const cardVariants = {
+    hidden: { opacity: 0, y: 40, scale: 0.95 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { delay: i * 0.2, duration: 0.7, ease: "easeOut" },
+    }),
+  };
+
+  const testimonialVariants = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.7 } },
+  };
+
   return (
     <section
-      id="events"
-      className="relative bg-primery from-white to-blue-50 py-16 px-4"
+      id="Events"
+      className="relative bg-primery scroll-mt-24 from-white to-blue-50 py-16 px-4"
       aria-labelledby="events-title"
     >
       <div className="max-w-6xl mx-auto">
@@ -65,8 +82,13 @@ const EventsSection = () => {
         {/* Event Cards */}
         <div className="mt-10 grid gap-8 sm:grid-cols-2 md:grid-cols-3">
           {events.map((event, index) => (
-            <article
+            <motion.article
               key={index}
+              custom={index}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={cardVariants}
               className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-start transform hover:-translate-y-1 hover:shadow-2xl transition duration-500"
             >
               <h4 className="text-xl font-semibold text-green">
@@ -75,7 +97,7 @@ const EventsSection = () => {
               <p className="mt-2 text-gray-600 text-sm md:text-base">
                 {event.description}
               </p>
-            </article>
+            </motion.article>
           ))}
         </div>
 
@@ -87,11 +109,12 @@ const EventsSection = () => {
 
           <div className="relative mt-8 max-w-3xl mx-auto">
             {testimonials.map((t, index) => (
-              <div
+              <motion.div
                 key={index}
-                className={`transition-opacity duration-700 ${
-                  index === current ? "opacity-100" : "opacity-0 absolute inset-0"
-                }`}
+                initial="hidden"
+                animate={current === index ? "visible" : "hidden"}
+                variants={testimonialVariants}
+                className={`absolute inset-0`}
               >
                 <p className="text-lg md:text-xl text-white italic">
                   {t.quote}
@@ -99,19 +122,17 @@ const EventsSection = () => {
                 <span className="mt-3 block text-sm md:text-base text-white">
                   {t.author}
                 </span>
-              </div>
+              </motion.div>
             ))}
 
             {/* Slider dots */}
-            <div className="flex justify-center mt-6 space-x-2">
+            <div className="flex justify-center mt-6 space-x-2 -bottom-28 relative z-10">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrent(index)}
                   aria-label={`Go to testimonial ${index + 1}`}
-                  className={`h-3 w-3 rounded-full transition-colors duration-300 ${
-                    current === index ? "bg-red" : "bg-gray-300"
-                  }`}
+                 className={`h-3 w-3 rounded-full transition-colors duration-300 ${ current === index ? "bg-red" : "bg-gray-300" }`}
                 />
               ))}
             </div>

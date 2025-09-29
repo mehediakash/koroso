@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import logo from "../../assets/logo/logo-white.png"
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
+  const [activeSection, setActiveSection] = useState('home'); // default Home
+  const location = useLocation();
 
 
 // Add this function
@@ -15,45 +17,116 @@ const handleLinkClick = () => {
 
   // Sticky navbar effect
 
-  useEffect(() => {
-  if (isMobileMenuOpen) {
-    document.body.style.overflow = 'hidden';
-  } else {
-    document.body.style.overflow = 'unset';
-  }
-
-  return () => {
-    document.body.style.overflow = 'unset';
+useEffect(() => {
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
   };
-}, [isMobileMenuOpen]);
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
 
+
+ // Track active section on scroll
+  useEffect(() => {
+    const sectionEls = menuItems
+      .filter(i => i.href.startsWith("#"))
+      .map(i => document.querySelector(i.href));
+
+    const handleScroll = () => {
+      const scrollPos = window.scrollY + 120; // offset for sticky header
+      let found = false;
+
+      sectionEls.forEach(section => {
+        if (section && section.offsetTop <= scrollPos &&
+          section.offsetTop + section.offsetHeight > scrollPos) {
+          setActiveSection(`#${section.id}`);
+          found = true;
+        }
+      });
+
+      // If no section found and at top, default Home
+      if (!found && window.scrollY < 200) {
+        setActiveSection('home');
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Track route change for Contact page
+  useEffect(() => {
+    if (location.pathname === "/contact") {
+      setActiveSection("/contact");
+    } else if (location.pathname === "/") {
+      // Back to homepage → default Home
+      setActiveSection("home");
+    }
+  }, [location]);
+
+
+
+const handleSmoothScroll = (e, href) => {
+  e.preventDefault();
+  const section = document.querySelector(href);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  handleLinkClick(); // closes mobile menu
+};
+
+// Mission
+// Programs
+// Impact
+// Partners
+// Events
+// FAQ
   const menuItems = [
     {
-      href: "#About_Us", 
-      title: "About Us",
+      href: "/", 
+      title: "Home",
       
+    },
+    {
+      href: "#Mission", 
+      title: "Mission",
+     
     },
     {
       href: "#Programs", 
       title: "Programs",
-     
+    
     },
     {
-      href: "#Get_Involved", 
-      title: "Get Involved",
+      href: "#Team", 
+      title: "Our Team",
     
     },
    
     {
-      href: "/contact", 
-      target: "_blank" ,
-      title: "Contact",
+      href: "#Partners", 
+      title: "Partners",
+      
+    },
+    {
+      href: "#Events", 
+      title: "Events",
       
     },
     {
       href: "#FAQ", 
-      target: "_blank" ,
       title: "FAQ",
+      
+    },
+    {
+      href: "/contact", 
+      target: "_blank" ,
+      title: "Contact",
       
     }
   ];
@@ -79,8 +152,13 @@ const handleLinkClick = () => {
                 <div key={index} className="relative group">
                    <Link 
                                 to={item.href}
-                             
-                                className="block font-Poppins text-white hover:text-white font-medium mb-2 transition-colors duration-200"
+                                onClick={(e) => item.href.startsWith("#") && handleSmoothScroll(e, item.href)}
+                                className={`relative block font-Poppins text-white font-medium mb-2 
+                                after:content-[''] after:absolute after:left-0 after:bottom-0 
+                                after:h-[2px] after:w-0 after:bg-red 
+                                after:transition-all after:duration-300 hover:after:w-full
+                                ${activeSection === item.href ? 'after:w-full text-white' : ''}`}
+
                               >
                   <button className="text-white md:text-xl cursor-pointer  hover:text-white font-medium py-2 transition-colors duration-200">
                     {item.title}

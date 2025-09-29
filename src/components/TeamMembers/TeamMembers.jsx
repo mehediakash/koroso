@@ -8,9 +8,10 @@ import {
   Award,
   MapPin
 } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const TeamMembers = () => {
-  const [showBio, setShowBio] = useState(false); // নতুন state
+  const [showBio, setShowBio] = useState(false);
 
   const teamMembers = [
     {
@@ -60,20 +61,31 @@ const TeamMembers = () => {
     }
   ];
 
-  const SocialIcon = ({ href, icon: Icon, label, className = "" }) => (
+  const SocialIcon = ({ href, icon: Icon, label }) => (
     <a
       href={href}
-      className={`w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:scale-110 transition-all duration-300 hover:bg-white/20 ${className}`}
+      className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:scale-110 transition-all duration-300 hover:bg-white/20"
       aria-label={label}
     >
       <Icon className="w-4 h-4" />
     </a>
   );
 
+  // Framer Motion variants
+  const cardVariants = {
+    hidden: { opacity: 0, y: 40, rotate: -2, scale: 0.95 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      rotate: 0,
+      scale: 1,
+      transition: { delay: i * 0.2, duration: 0.7, ease: "easeOut" }
+    })
+  };
+
   return (
-    <section className="relative py-20 lg:py-28 bg-primery from-gray-50 via-white to-blue-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900/20 overflow-hidden">
+    <section id='Team' className="scroll-mt-24 relative py-20 lg:py-28 bg-primery from-gray-50 via-white to-blue-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900/20 overflow-hidden">
       {/* Background Elements */}
-      {/* <div className="absolute top-0 left-0 w-72 h-72 bg-purple-200/20 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl dark:bg-purple-900/20"></div> */}
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-200/20 rounded-full translate-x-1/2 translate-y-1/2 blur-3xl dark:bg-blue-900/20"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -86,7 +98,7 @@ const TeamMembers = () => {
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
             Executive <span className="text-transparent bg-clip-text bg-gradient-to-r from-red to-red">Leadership</span>
           </h2>
-          <p className="text-lg  text-white leading-relaxed">
+          <p className="text-lg text-white leading-relaxed">
             Dedicated students leading with passion and vision. Get to know the talented individuals 
             driving our organization forward.
           </p>
@@ -95,11 +107,14 @@ const TeamMembers = () => {
         {/* Team Members Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {teamMembers.map((member, index) => (
-            <div
+            <motion.div
               key={member.id}
+              custom={index}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={cardVariants}
               className="group relative"
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
             >
               {/* Main Card */}
               <div className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200/50 dark:border-gray-700/50">
@@ -169,7 +184,7 @@ const TeamMembers = () => {
                     </div>
                   </div>
 
-                  {/* Bio (শুধু showBio true হলে দেখাবে) */}
+                  {/* Bio */}
                   {showBio && (
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6 line-clamp-3">
                       {member.bio}
@@ -182,10 +197,7 @@ const TeamMembers = () => {
                 <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-primery/5 to-transparent rounded-bl-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-purple-500/5 to-transparent rounded-tr-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-
-              {/* Floating Animation */}
-              <div className="absolute -inset-2 bg-gradient-to-r from-primery to-primery rounded-2xl opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-500 -z-10"></div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
@@ -193,7 +205,7 @@ const TeamMembers = () => {
         <div className="text-center mt-16 lg:mt-20">
           <div className="inline-flex flex-col sm:flex-row gap-4">
             <button 
-              onClick={() => setShowBio(!showBio)} // Meet Full Team এ ক্লিক করলে showBio টগল হবে
+              onClick={() => setShowBio(!showBio)}
               className="px-8 py-4 bg-gradient-to-r from-primery to-primery text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2">
               {showBio ? 'Hide Team Bios' : 'Meet Full Team'}
               <ExternalLink className="w-4 h-4" />
