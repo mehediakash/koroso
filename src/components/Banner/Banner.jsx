@@ -85,7 +85,7 @@ const words = [
         <div className="mt-10">
           <a
             target="_blank"
-            href="https://docs.google.com/forms/d/1mKvxfHgPeit87d_Ua86cI2kMbb6FoePejt2pVjBd0P8/viewform"
+            href="https://stripe.com/"
             className="inline-flex items-center px-8 py-4 border-red border hover:bg-red text-white font-semibold text-lg rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
            Donate Now

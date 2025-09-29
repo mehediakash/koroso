@@ -6,9 +6,11 @@ import {
   ExternalLink,
   GraduationCap,
   Award,
-  MapPin
+  MapPin,
+
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const TeamMembers = () => {
   const [showBio, setShowBio] = useState(false);
@@ -210,9 +212,13 @@ const TeamMembers = () => {
               {showBio ? 'Hide Team Bios' : 'Meet Full Team'}
               <ExternalLink className="w-4 h-4" />
             </button>
+           
             <button className="px-8 py-4 bg-white/80 dark:bg-gray-800/80 text-gray-900 dark:text-white font-semibold rounded-xl border border-gray-200/50 dark:border-gray-700/50 shadow-sm hover:shadow-md transition-all duration-300">
+               <Link target='_blank' to={"https://docs.google.com/forms/d/e/1FAIpQLSdH3MdgvtnuJB5pbhGJmQS2AgfsybaZeLh6g-3OhYjHACAeww/viewform"}>
               Join Our Team
+              </Link>
             </button>
+         
           </div>
         </div>
       </div>

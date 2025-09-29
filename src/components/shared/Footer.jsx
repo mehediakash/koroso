@@ -12,14 +12,35 @@ import {
 } from 'lucide-react';
 
 import logo from "../../assets/logo/logo-white.png"
+import { motion, AnimatePresence } from "framer-motion";
+
  
 const Footer = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: ''
-  });
+const [formData, setFormData] = useState({ name: "", email: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const handleInputChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Simulate API submission (replace with Netlify/Formspree handler)
+    await new Promise((resolve) => setTimeout(resolve, 1200));
+
+    setIsSubmitting(false);
+    setFormData({ name: "", email: "" });
+    setSuccess(true);
+
+    // Hide popup after 3s
+    setTimeout(() => setSuccess(false), 3000);
+  };
+
+
+  
 
   const footerSections = {
     contact: {
@@ -114,24 +135,7 @@ const Footer = () => {
     }
   ];
 
-  const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setIsSubmitting(false);
-    setFormData({ firstName: '', lastName: '', email: '' });
-    // Here you would typically make an API call to your newsletter service
-  };
 
   const SocialIcon = ({ icon, className }) => {
     const icons = {
@@ -335,6 +339,19 @@ const Footer = () => {
                   )}
                 </button>
               </form>
+              <AnimatePresence>
+          {success && (
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.8 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 50, scale: 0.8 }}
+              transition={{ duration: 0.5 }}
+              className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-green-600 text-white px-6 py-4 rounded-lg shadow-lg z-50"
+            >
+              Thank you! You’ve successfully subscribed.
+            </motion.div>
+          )}
+        </AnimatePresence>
 
               {/* Social Media Links */}
               <div className="pt-4 border-t border-gray-700">
