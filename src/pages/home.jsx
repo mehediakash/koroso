@@ -8,22 +8,25 @@ import EventsSection from '../components/EventsSection/EventsSection'
 import FAQSection from '../components/FAQSection/FAQSection'
 import JoinSection from '../components/JoinSection/JoinSection'
 import TeamMembers from '../components/TeamMembers/TeamMembers'
-import { Helmet } from 'react-helmet'
+import DynamicSEO from '../components/DynamicSEO'
 
 const home = () => {
+  const jsonLdData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Oromo Tech & Innovation Society",
+    "url": "https://yourwebsite.com",
+    "logo": "https://yourwebsite.com/logo.png"
+  }
   return (
     <>
-     <Helmet>
-        <title>OTIS | Home</title>
-        <meta
-          name="description"
-          content="OTIS connects students, professionals, and organizations through mentorship, events, and community programs."
-        />
-        <meta
-          name="keywords"
-          content="OTIS, Oromo Tech, mentorship, events, community, summit, hackathon"
-        />
-      </Helmet>
+<DynamicSEO
+        title="Oromo Tech & Innovation Society – Home"
+        description="Oromo Tech & Innovation Society promotes innovation, leadership and entrepreneurship through sustainable programs."
+        keywords="Oromo Tech, Innovation, Leadership, Entrepreneurship, OTIS"
+        image="https://ewb-usa.org/files/galleries/EWBUSAHomepage.png"
+        url="https://yourwebsite.com"
+      />
     <Banner/>
     <MissionVision/>
     <Programs/>

@@ -6,7 +6,6 @@ import RootLayout from './components/Layout/RootLayout';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import Contact from './pages/Contact';
-import { Helmet } from "react-helmet";
 
 function App() {
   const router = createBrowserRouter(
@@ -22,20 +21,7 @@ function App() {
 
   return (
     <>
-      {/* Global SEO for all pages (can override per page inside components) */}
-      <Helmet>
-        <title>OTIS | Oromo Tech & Innovation Society</title>
-        <meta
-          name="description"
-          content="OTIS connects students, professionals, and organizations through mentorship, events, and community programs."
-        />
-        <meta
-          name="keywords"
-          content="OTIS, Oromo Tech, mentorship, events, community, summit, hackathon"
-        />
-      </Helmet>
-
-      {/* Router */}
+   
       <RouterProvider router={router} />
     </>
   );
