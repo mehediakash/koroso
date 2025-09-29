@@ -234,13 +234,13 @@ const handleSmoothScroll = (e, href) => {
 </div>
             {/* Mobile Menu Button */}
           <button 
-  className="lg:hidden relative text-white z-60 flex flex-col items-center justify-center w-10 h-10"
+  className="lg:hidden relative !text-white  z-60 flex flex-col items-center justify-center w-10 h-10"
   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
   aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
 >
-  <span className={`w-6 h-0.5   bg-gray-700 transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
-  <span className={`w-6 h-0.5 bg-gray-700 my-1.5 transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
-  <span className={`w-6 h-0.5 bg-gray-700 transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+  <span className={`w-6 h-0.5   bg-white transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5 !bg-black' : 'bg-black'}`}></span>
+  <span className={`w-6 h-0.5 bg-white my-1.5 transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0 !bg-black' : 'bg-black'}`}></span>
+  <span className={`w-6 h-0.5 bg-white transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5 !bg-black' : 'bg-black'}`}></span>
 </button>
           </div>
         </div>
@@ -255,7 +255,7 @@ const handleSmoothScroll = (e, href) => {
   ></div>
   
   {/* Slide-in Menu */}
-  <div className={`absolute right-0 top-0 h-full w-80 bg-white shadow-xl transform transition-transform duration-300 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+  <div className={`absolute text-white right-0 top-0 h-full w-80 bg-white shadow-xl transform transition-transform duration-300 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
     
     {/* Header with Close Button */}
     {/* <div className="flex items-center justify-between p-4 border-b border-gray-200">
@@ -276,9 +276,11 @@ const handleSmoothScroll = (e, href) => {
       <div className="px-4 py-6 space-y-6">
         {menuItems?.map((item, index) => (
           <div key={index} className="border-b border-gray-100 pb-4 last:border-b-0">
+            <Link  to={item.href} onClick={(e) => item.href.startsWith("#") && handleSmoothScroll(e, item.href)}>
             <button className="w-full text-left text-gray-800 font-medium text-lg mb-3">
               {item.title}
             </button>
+            </Link>
             <div className="space-y-2">
               {item?.items?.flat()?.map((subItem, subIndex) => (
                 <div key={subIndex}>

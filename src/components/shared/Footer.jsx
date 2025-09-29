@@ -40,6 +40,14 @@ const [formData, setFormData] = useState({ name: "", email: "" });
   };
 
 
+const handleSmoothScroll = (e, href) => {
+  e.preventDefault();
+  const section = document.querySelector(href);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  handleLinkClick(); // closes mobile menu
+};
   
 
   const footerSections = {
@@ -49,20 +57,20 @@ const [formData, setFormData] = useState({ name: "", email: "" });
         <>
           <div className="space-y-2">
             <div className="flex items-start gap-3">
-              <MapPin className="w-5 h-5 text-primery mt-0.5 flex-shrink-0" />
+              <MapPin className="w-5 h-5 text-white mt-0.5 flex-shrink-0" />
               <div>
                 <p className="text-white">300 Washington Ave, </p>
                 <p className="text-white">Minneapolis, MN</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <Phone className="w-5 h-5 text-primery flex-shrink-0" />
+              <Phone className="w-5 h-5 text-white flex-shrink-0" />
               <a href="tel:3037722723" className="text-white hover:text-white transition-colors duration-200">
                 612-442-2126
               </a>
             </div>
             <div className="flex items-center gap-3">
-              <Mail className="w-5 h-5 text-primery flex-shrink-0" />
+              <Mail className="w-5 h-5 text-white flex-shrink-0" />
               <a href="mailto:info@otis.org" className="text-white hover:text-white transition-colors duration-200">
                 info@otis.org 
               </a>
@@ -77,13 +85,13 @@ const [formData, setFormData] = useState({ name: "", email: "" });
     about: {
       title: "ABOUT US",
       links: [
-        { name: "Privacy", href: "/privacy" },
+        { name: "Programs", href: "#Programs" },
         { name: "Terms", href: "/terms" },
-        { name: "Our Team", href: "/our-team" },
-        { name: "Commitment to DEI", href: "/dei" },
-        { name: "FAQs", href: "/faqs" },
-        { name: "Impactful Investors", href: "/investors" },
-        { name: "Contact Us", href: "/contact" }
+        { name: "Our Team", href: "#Team" },
+        { name: "Get Involved", href: "https://docs.google.com/forms/d/e/1FAIpQLSdH3MdgvtnuJB5pbhGJmQS2AgfsybaZeLh6g-3OhYjHACAeww/viewform" },
+        { name: "Donate", href: "https://stripe.com/" },
+        { name: "Contact Us", href: "/contact" },
+        { name: "FAQ", href: "#FAQ" },
       ]
     },
     programs: {
@@ -150,9 +158,97 @@ const [formData, setFormData] = useState({ name: "", email: "" });
         </svg>
       ),
       instagram: (
-        <svg className={className} fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987s11.987-5.367 11.987-11.987C24.014 5.367 18.647.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.25 14.816 3.76 13.665 3.76 12.368s.49-2.448 1.366-3.323c.875-.807 2.026-1.297 3.323-1.297s2.448.49 3.323 1.297c.875.875 1.366 2.026 1.366 3.323s-.491 2.448-1.366 3.323c-.875.807-2.026 1.297-3.323 1.297zm8.062-10.966c-.49 0-.875-.385-.875-.875s.385-.875.875-.875.875.385.875.875-.385.875-.875.875zm1.95 10.966c-1.366 0-2.448-1.082-2.448-2.448v-6.104c0-1.366 1.082-2.448 2.448-2.448h6.104c1.366 0 2.448 1.082 2.448 2.448v6.104c0 1.366-1.082 2.448-2.448 2.448h-6.104z"/>
-        </svg>
+        <svg
+    className={className} fill="currentColor" 
+ 
+      viewBox="0 0 551.034 551.034"
+    >
+      <g>
+        {/* First Gradient */}
+        <linearGradient
+          id="XMLID_2_"
+          gradientUnits="userSpaceOnUse"
+          x1="275.517"
+          y1="4.5714"
+          x2="275.517"
+          y2="549.7202"
+          gradientTransform="matrix(1 0 0 -1 0 554)"
+        >
+          <stop offset="0" style={{ stopColor: "#E09B3D" }} />
+          <stop offset="0.3" style={{ stopColor: "#C74C4D" }} />
+          <stop offset="0.6" style={{ stopColor: "#C21975" }} />
+          <stop offset="1" style={{ stopColor: "#7024C4" }} />
+        </linearGradient>
+
+        {/* Outer Square Path */}
+        <path
+          id="XMLID_17_"
+          style={{ fill: "url(#XMLID_2_)" }}
+          d="M386.878,0H164.156C73.64,0,0,73.64,0,164.156v222.722
+             c0,90.516,73.64,164.156,164.156,164.156h222.722
+             c90.516,0,164.156-73.64,164.156-164.156V164.156
+             C551.033,73.64,477.393,0,386.878,0z
+             M495.6,386.878c0,60.045-48.677,108.722-108.722,108.722H164.156
+             c-60.045,0-108.722-48.677-108.722-108.722V164.156
+             c0-60.046,48.677-108.722,108.722-108.722h222.722
+             c60.045,0,108.722,48.676,108.722,108.722L495.6,386.878z"
+        />
+
+        {/* Second Gradient */}
+        <linearGradient
+          id="XMLID_3_"
+          gradientUnits="userSpaceOnUse"
+          x1="275.517"
+          y1="4.5714"
+          x2="275.517"
+          y2="549.7202"
+          gradientTransform="matrix(1 0 0 -1 0 554)"
+        >
+          <stop offset="0" style={{ stopColor: "#E09B3D" }} />
+          <stop offset="0.3" style={{ stopColor: "#C74C4D" }} />
+          <stop offset="0.6" style={{ stopColor: "#C21975" }} />
+          <stop offset="1" style={{ stopColor: "#7024C4" }} />
+        </linearGradient>
+
+        {/* Inner Circle Path */}
+        <path
+          id="XMLID_81_"
+          style={{ fill: "url(#XMLID_3_)" }}
+          d="M275.517,133C196.933,133,133,196.933,133,275.516
+             s63.933,142.517,142.517,142.517S418.034,354.1,418.034,275.516
+             S354.101,133,275.517,133z
+             M275.517,362.6c-48.095,0-87.083-38.988-87.083-87.083
+             s38.989-87.083,87.083-87.083
+             c48.095,0,87.083,38.988,87.083,87.083
+             C362.6,323.611,323.611,362.6,275.517,362.6z"
+        />
+
+        {/* Third Gradient */}
+        <linearGradient
+          id="XMLID_4_"
+          gradientUnits="userSpaceOnUse"
+          x1="418.306"
+          y1="4.5714"
+          x2="418.306"
+          y2="549.7202"
+          gradientTransform="matrix(1 0 0 -1 0 554)"
+        >
+          <stop offset="0" style={{ stopColor: "#E09B3D" }} />
+          <stop offset="0.3" style={{ stopColor: "#C74C4D" }} />
+          <stop offset="0.6" style={{ stopColor: "#C21975" }} />
+          <stop offset="1" style={{ stopColor: "#7024C4" }} />
+        </linearGradient>
+
+        {/* Small Circle */}
+        <circle
+          id="XMLID_83_"
+          style={{ fill: "url(#XMLID_4_)" }}
+          cx="418.306"
+          cy="134.072"
+          r="34.149"
+        />
+      </g>
+    </svg>
       ),
       tiktok: (
         <svg className={className} xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" version="1.1">
@@ -198,7 +294,7 @@ const [formData, setFormData] = useState({ name: "", email: "" });
             <div className="xl:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-8">
               {/* About Us */}
               <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-white border-l-4 border-primery pl-3">
+                <h4 className="text-lg font-semibold text-white border-l-4 border-primery ">
                   {footerSections.about.title}
                 </h4>
                 <ul className="space-y-2">
@@ -206,6 +302,7 @@ const [formData, setFormData] = useState({ name: "", email: "" });
                     <li key={index}>
                       <Link 
                         to={link.href}
+                        onClick={(e) => link.href.startsWith("#") && handleSmoothScroll(e, link.href)}
                         className="text-gray-300 hover:text-white transition-all duration-200 transform hover:translate-x-1 flex items-center gap-1 group"
                       >
                         <span className="w-1 h-1 bg-primery rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
@@ -218,7 +315,7 @@ const [formData, setFormData] = useState({ name: "", email: "" });
 
               {/* Programs */}
               <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-white border-l-4 border-primery pl-3">
+                <h4 className="text-lg font-semibold text-white border-l-4 border-primery ">
                   {footerSections.programs.title}
                 </h4>
                 <ul className="space-y-2">
@@ -251,7 +348,7 @@ const [formData, setFormData] = useState({ name: "", email: "" });
 
               {/* Get Involved */}
               <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-white border-l-4 border-primery pl-3">
+                <h4 className="text-lg font-semibold text-white border-l-4 border-primery ">
                   {footerSections.involvement.title}
                 </h4>
                 <ul className="space-y-2">
@@ -286,7 +383,7 @@ const [formData, setFormData] = useState({ name: "", email: "" });
             {/* Newsletter Signup */}
             <div className="xl:col-span-1 space-y-6">
               <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-white border-l-4 border-primery pl-3">
+                <h4 className="text-lg font-semibold text-white border-l-4 border-primery ">
                   STAY CONNECTED
                 </h4>
                 <p className="text-gray-300 text-sm leading-relaxed">

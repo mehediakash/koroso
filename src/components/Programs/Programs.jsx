@@ -126,7 +126,7 @@ const Programs = () => {
                         <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-r ${program.gradient} text-white shadow-lg mb-6 transform group-hover:scale-110 transition-transform duration-300`}>
                           {program.icon}
                         </div>
-                        <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primery group-hover:to-primery transition-all duration-300">
+                        <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primery group-hover:to-primery transition-all duration-300">
                           {program.title}
                         </h4>
                         <div className="space-y-2 mb-6">

@@ -55,7 +55,7 @@ const PartnersSection = () => {
         {/* CTA */}
         <div className="mt-12">
           <a
-            href="mailto:otisociety+partners@gmail.com?subject=Partner%20with%20OTIS"
+            href="mailto:info@otis.org?subject=Partner%20with%20OTIS"
             className="inline-block px-8 py-3 bg-red text-white rounded-full shadow-lg hover:scale-105 hover:bg-red transition-transform duration-300"
           >
             Email Partnerships

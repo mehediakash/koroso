@@ -75,7 +75,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen bg-primery">
       <PageHeader 
         title="Contact Us"
         description="Get in touch with our team. We're here to help and answer any questions you might have."
@@ -90,11 +90,11 @@ const Contact = () => {
               {/* Contact Information */}
               <div className="lg:col-span-1">
                 <div className="space-y-6">
-                  <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 border border-gray-200 dark:border-gray-700">
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                  <div className="bg-primery dark:bg-gray-800 rounded-2xl shadow-lg p-6 border border-gray-200 dark:border-gray-700">
+                    <h3 className="text-xl font-semibold text-white dark:text-white mb-4">
                       Get in Touch
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-6">
+                    <p className="text-white dark:text-gray-300 mb-6">
                       We'd love to hear from you. Send us a message and we'll respond as soon as possible.
                     </p>
                     
@@ -105,9 +105,9 @@ const Contact = () => {
                             {info.icon}
                           </div>
                           <div>
-                            <h4 className="font-semibold text-gray-900 dark:text-white">{info.title}</h4>
-                            <p className="text-gray-700 dark:text-gray-300">{info.content}</p>
-                            <p className="text-sm text-gray-500 dark:text-gray-400">{info.description}</p>
+                            <h4 className="font-semibold text-white dark:text-white">{info.title}</h4>
+                            <p className="text-white dark:text-gray-300">{info.content}</p>
+                            <p className="text-sm text-white ">{info.description}</p>
                           </div>
                         </div>
                       ))}
@@ -134,7 +134,7 @@ const Contact = () => {
 
               {/* Contact Form */}
               <div className="lg:col-span-2">
-                <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700">
+                <div className="bg-primery dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700">
                   <div className="bg-gradient-to-r from-primery to-primery px-6 py-4">
                     <h3 className="text-xl font-semibold text-white flex items-center gap-2">
                       <MessageCircle className="w-5 h-5" />
@@ -171,7 +171,7 @@ const Contact = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                       {/* Name Field */}
                       <div className="space-y-2">
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                        <label htmlFor="name" className="block text-sm font-medium text-white dark:text-gray-300">
                           Full Name *
                         </label>
                         <div className="relative">
@@ -183,7 +183,7 @@ const Contact = () => {
                             required
                             value={formData.name}
                             onChange={handleInputChange}
-                            className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primery focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200"
+                            className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primery focus:border-transparent bg-white dark:bg-gray-700 text-white dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200"
                             placeholder="Enter your full name"
                           />
                         </div>
@@ -191,7 +191,7 @@ const Contact = () => {
 
                       {/* Email Field */}
                       <div className="space-y-2">
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                        <label htmlFor="email" className="block text-sm font-medium text-white dark:text-gray-300">
                           Email Address *
                         </label>
                         <div className="relative">
@@ -203,7 +203,7 @@ const Contact = () => {
                             required
                             value={formData.email}
                             onChange={handleInputChange}
-                            className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primery focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200"
+                            className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primery focus:border-transparent bg-white dark:bg-gray-700 text-white dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200"
                             placeholder="Enter your email address"
                           />
                         </div>
@@ -212,7 +212,7 @@ const Contact = () => {
 
                     {/* Subject Field */}
                     <div className="space-y-2 mb-6">
-                      <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                      <label htmlFor="subject" className="block text-sm font-medium text-white dark:text-gray-300">
                         Subject *
                       </label>
                       <select
@@ -221,7 +221,7 @@ const Contact = () => {
                         required
                         value={formData.subject}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primery focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all duration-200"
+                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primery focus:border-transparent bg-white dark:bg-gray-700 text-white dark:text-white transition-all duration-200"
                       >
                         <option value="">Select a subject</option>
                         <option value="general">General Inquiry</option>
@@ -234,7 +234,7 @@ const Contact = () => {
 
                     {/* Message Field */}
                     <div className="space-y-2 mb-6">
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                      <label htmlFor="message" className="block text-sm font-medium text-white dark:text-gray-300">
                         Message *
                       </label>
                       <textarea
@@ -244,7 +244,7 @@ const Contact = () => {
                         rows={6}
                         value={formData.message}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primery focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 resize-none transition-all duration-200"
+                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primery focus:border-transparent bg-white dark:bg-gray-700 text-white dark:text-white placeholder-gray-500 dark:placeholder-gray-400 resize-none transition-all duration-200"
                         placeholder="Tell us how we can help you..."
                       />
                     </div>
@@ -253,7 +253,7 @@ const Contact = () => {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-gradient-to-r from-primery to-primery hover:from-primery hover:to-primery text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2"
+                      className="w-full bg-red from-primery to-primery hover:from-primery hover:to-primery text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2"
                     >
                       {isSubmitting ? (
                         <>
@@ -272,15 +272,15 @@ const Contact = () => {
 
                 {/* Additional Info */}
                 <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Response Time</h4>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm">
+                  <div className="bg-primery dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+                    <h4 className="font-semibold text-white dark:text-white mb-2">Response Time</h4>
+                    <p className="text-white dark:text-gray-300 text-sm">
                       We typically respond to all inquiries within 24 hours during business days.
                     </p>
                   </div>
-                  <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Emergency Contact</h4>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm">
+                  <div className="bg-primery dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700">
+                    <h4 className="font-semibold text-white dark:text-white mb-2">Emergency Contact</h4>
+                    <p className="text-white dark:text-gray-300 text-sm">
                       For urgent matters outside business hours, please call our emergency line.
                     </p>
                   </div>
