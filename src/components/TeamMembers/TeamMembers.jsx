@@ -98,12 +98,10 @@ const TeamMembers = () => {
             <span className="text-sm font-medium text-white">Meet Our Team</span>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-            Executive <span className="text-transparent bg-clip-text bg-gradient-to-r from-red to-red">Leadership</span>
+         
+            Executive <span className="text-transparent bg-clip-text bg-gradient-to-r from-red to-red">Leadership</span> Members
           </h2>
-          <p className="text-lg text-white leading-relaxed">
-            Dedicated students leading with passion and vision. Get to know the talented individuals 
-            driving our organization forward.
-          </p>
+          
         </div>
 
         {/* Team Members Grid */}

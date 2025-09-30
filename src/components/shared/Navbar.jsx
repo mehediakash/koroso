@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import logo from "../../assets/logo/logo-white.png"
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const [activeSection, setActiveSection] = useState('home'); // default Home
   const location = useLocation();
+  const navigate = useNavigate();
 
 
 // Add this function
@@ -70,15 +71,34 @@ useEffect(() => {
   }, [location]);
 
 
+  useEffect(() => {
+    if (location.hash) {
+      const section = document.querySelector(location.hash);
+      if (section) {
+        setTimeout(() => {
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 300); // small delay to ensure DOM is ready
+      }
+      
+    }
+  }, [location]);
+
+
 
 const handleSmoothScroll = (e, href) => {
-  e.preventDefault();
-  const section = document.querySelector(href);
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-  handleLinkClick(); // closes mobile menu
-};
+    e.preventDefault();
+    if (location.pathname !== "/") {
+      // go to home first with hash
+      navigate(`/${href}`);
+    } else {
+      const section = document.querySelector(href);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+    handleLinkClick();
+    
+  };
 
 // Mission
 // Programs
@@ -152,7 +172,10 @@ const handleSmoothScroll = (e, href) => {
                 <div key={index} className="relative group">
                    <Link 
                                 to={item.href}
-                                onClick={(e) => item.href.startsWith("#") && handleSmoothScroll(e, item.href)}
+                                
+                              onClick={(e) =>
+                item.href.startsWith("#") && handleSmoothScroll(e, item.href)
+              }
                                 className={`relative block font-Poppins text-white font-medium mb-2 
                                 after:content-[''] after:absolute after:left-0 after:bottom-0 
                                 after:h-[2px] after:w-0 after:bg-red 
@@ -276,7 +299,13 @@ const handleSmoothScroll = (e, href) => {
       <div className="px-4 py-6 space-y-6">
         {menuItems?.map((item, index) => (
           <div key={index} className="border-b border-gray-100 pb-4 last:border-b-0">
-            <Link  to={item.href} onClick={(e) => item.href.startsWith("#") && handleSmoothScroll(e, item.href)}>
+            <Link  to={item.href} onClick={(e) => {
+            if (item.href.startsWith("#")) {
+              handleSmoothScroll(e, item.href);
+            } else {
+              handleLinkClick(); // <-- close menu for normal routes too
+            }
+          }}>
             <button className="w-full text-left text-gray-800 font-medium text-lg mb-3">
               {item.title}
             </button>
@@ -327,8 +356,8 @@ const handleSmoothScroll = (e, href) => {
         </a> */}
         <a 
           target="_blank"
-            href="https://docs.google.com/forms/d/1mKvxfHgPeit87d_Ua86cI2kMbb6FoePejt2pVjBd0P8/viewform"
-          className="w-full px-6 py-3 bg-white text-white rounded-full hover:bg-blue-700 transition-colors duration-200 font-medium text-center"
+            href="https://donate.stripe.com/test_fZu6oHg30eyw4dtep367S00"
+          className="w-full px-6 py-3 bg-red text-white rounded-full hover:bg-red transition-colors duration-200 font-medium text-center"
           onClick={handleLinkClick}
         >
           Donate Now

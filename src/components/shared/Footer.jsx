@@ -89,7 +89,7 @@ const handleSmoothScroll = (e, href) => {
         { name: "Terms", href: "/terms" },
         { name: "Our Team", href: "#Team" },
         { name: "Get Involved", href: "https://docs.google.com/forms/d/e/1FAIpQLSdH3MdgvtnuJB5pbhGJmQS2AgfsybaZeLh6g-3OhYjHACAeww/viewform" },
-        { name: "Donate", href: "https://stripe.com/" },
+        { name: "Donate", href: "https://donate.stripe.com/test_fZu6oHg30eyw4dtep367S00" },
         { name: "Contact Us", href: "/contact" },
         { name: "FAQ", href: "#FAQ" },
       ]
@@ -97,7 +97,7 @@ const handleSmoothScroll = (e, href) => {
     programs: {
       title: "PROGRAMS",
       links: [
-        { name: "Students & Early Career", href: "#" },
+        { name: "Students & Early Career", href: "#Programs" },
         { name: "Professionals & Employers", href: "#", external: true },
         { name: "Community & Innovation", href: "#" },
 
