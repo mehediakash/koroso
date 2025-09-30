@@ -79,7 +79,7 @@ const Privacy = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen bg-primery dark:bg-white">
       <PageHeader 
         title="Privacy Policy"
         description="Learn how we collect, use, and protect your personal information. Your privacy is our priority."
@@ -93,8 +93,8 @@ const Privacy = () => {
               
               {/* Sidebar Navigation */}
               <div className="lg:w-1/4">
-                <div className="sticky top-24 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 border border-gray-200 dark:border-gray-700">
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">On This Page</h3>
+                <div className="sticky top-24 bg-primery dark:bg-gray-800 rounded-2xl shadow-lg p-6 border border-gray-200 dark:border-white">
+                  <h3 className="text-lg font-semibold text-white dark:text-white mb-4">On This Page</h3>
                   <nav className="space-y-2">
                     {privacySections.map((section) => (
                       <button
@@ -105,8 +105,8 @@ const Privacy = () => {
                         }}
                         className={`w-full text-left px-3 py-2 rounded-lg transition-all duration-200 flex items-center gap-3 ${
                           activeSection === section.id
-                            ? 'bg-primery/10 text-primery border-l-4 border-primery'
-                            : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700'
+                            ? 'bg-white text-primery border-l-4 border-primery'
+                            : 'text-white dark:text-gray-400 hover:text-primery dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white'
                         }`}
                       >
                         {section.icon}
@@ -119,7 +119,7 @@ const Privacy = () => {
 
               {/* Main Content */}
               <div className="lg:w-3/4">
-                <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
+                <div className="bg-primery border border-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
                   
                   {/* Last Updated */}
                   <div className="bg-gradient-to-r from-primery to-primery px-6 py-4">
@@ -149,36 +149,36 @@ const Privacy = () => {
                           <div className="w-8 h-8 bg-gradient-to-r from-primery to-primery rounded-lg flex items-center justify-center text-white">
                             {section.icon}
                           </div>
-                          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                          <h2 className="text-2xl font-bold text-white dark:text-white">
                             {section.title}
                           </h2>
                         </div>
                         
                         <div className="prose prose-lg dark:prose-invert max-w-none">
-                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
+                          <p className="text-white dark:text-gray-300 leading-relaxed whitespace-pre-line">
                             {section.content}
                           </p>
                         </div>
 
                         {index < privacySections.length - 1 && (
-                          <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-200 dark:via-gray-700 to-transparent my-8"></div>
+                          <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-200 dark:via-white to-transparent my-8"></div>
                         )}
                       </section>
                     ))}
                   </div>
 
                   {/* CTA Section */}
-                  <div className="bg-gray-50 dark:bg-gray-700/50 px-6 py-8 border-t border-gray-200 dark:border-gray-600">
+                  <div className="bg-primery dark:bg-white/50 px-6 py-8 border-t border-gray-200 dark:border-white">
                     <div className="text-center">
-                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                      <h3 className="text-xl font-semibold text-white dark:text-white mb-2">
                         Still Have Questions?
                       </h3>
-                      <p className="text-gray-600 dark:text-gray-300 mb-4">
+                      <p className="text-white dark:text-gray-300 mb-4">
                         Contact our privacy team for any concerns or inquiries about your data.
                       </p>
                       <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a
-                          href="mailto:privacy@example.com"
+                          href="mailto:privacy@otis.org"
                           className="inline-flex items-center gap-2 px-6 py-3 bg-primery text-white rounded-lg hover:bg-primery/90 transition-colors duration-200"
                         >
                           <Mail className="w-4 h-4" />
@@ -186,7 +186,7 @@ const Privacy = () => {
                         </a>
                         <a
                           href="/contact"
-                          className="inline-flex items-center gap-2 px-6 py-3 bg-gray-200 dark:bg-gray-600 text-gray-900 dark:text-white rounded-lg hover:bg-gray-300 dark:hover:bg-gray-500 transition-colors duration-200"
+                          className="inline-flex items-center gap-2 px-6 py-3 bg-red dark:bg-white text-white dark:text-white rounded-lg  dark:hover:bg-gray-500 transition-colors duration-200"
                         >
                           Contact Support
                         </a>
