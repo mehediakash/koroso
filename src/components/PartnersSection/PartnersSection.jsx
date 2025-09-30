@@ -1,8 +1,8 @@
 import React from "react";
 
 const logos = [
-  { src: "https://th.bing.com/th/id/R.16597b58fb4d4fa8ebcf5a013fc19b0a?rik=a0DcRRp3bMzLow&pid=ImgRaw&r=0", alt: "Google" },
-  { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/512px-Microsoft_logo_%282012%29.svg.png?20230221160917", alt: "Microsoft" },
+  // { src: "https://th.bing.com/th/id/R.16597b58fb4d4fa8ebcf5a013fc19b0a?rik=a0DcRRp3bMzLow&pid=ImgRaw&r=0", alt: "Google" },
+  // { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/512px-Microsoft_logo_%282012%29.svg.png?20230221160917", alt: "Microsoft" },
   { src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/University_of_Minnesota_Logo.svg/512px-University_of_Minnesota_Logo.svg.png?20200121234844", alt: "University of Minnesota" },
   { src: "https://corporate.target.com/getmedia/890f3192-ce35-496a-a3cf-15fc0a8105d0/Target_Bullseye-Logo_Red.jpg?width=620", alt: "Target" },
   { src: "https://th.bing.com/th/id/R.faa7839e38cd5e4bdac97b7fe5b8b73f?rik=L6rs5XbKXFTnWQ&pid=ImgRaw&r=0", alt: "Medtronic" },
@@ -58,7 +58,7 @@ const PartnersSection = () => {
             href="mailto:info@otis.org?subject=Partner%20with%20OTIS"
             className="inline-block px-8 py-3 bg-red text-white rounded-full shadow-lg hover:scale-105 hover:bg-red transition-transform duration-300"
           >
-            Email Partnerships
+            Partner With Us
           </a>
         </div>
       </div>

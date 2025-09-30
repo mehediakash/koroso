@@ -79,7 +79,7 @@ const Terms = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen bg-primery">
       <PageHeader 
         title="Terms of Service"
         description="Please read these terms carefully before using our services. By accessing our platform, you agree to be bound by these terms."
@@ -110,8 +110,8 @@ const Terms = () => {
               
               {/* Sidebar Navigation */}
               <div className="lg:w-1/4">
-                <div className="sticky top-24 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 border border-gray-200 dark:border-gray-700">
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Terms Overview</h3>
+                <div className="sticky top-24 bg-primery dark:bg-gray-800 rounded-2xl shadow-lg p-6 border border-gray-200 dark:border-gray-700">
+                  <h3 className="text-lg font-semibold text-white mb-4">Terms Overview</h3>
                   <nav className="space-y-2">
                     {termsSections.map((section) => (
                       <button
@@ -122,8 +122,8 @@ const Terms = () => {
                         }}
                         className={`w-full text-left px-3 py-2 rounded-lg transition-all duration-200 flex items-center gap-3 ${
                           activeSection === section.id
-                            ? 'bg-primery/10 text-primery border-l-4 border-primery'
-                            : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700'
+                            ? 'bg-white text-primery border-l-4 border-primery'
+                            : 'text-white dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700'
                         }`}
                       >
                         {section.icon}
@@ -136,10 +136,10 @@ const Terms = () => {
 
               {/* Main Content */}
               <div className="lg:w-3/4">
-                <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
+                <div className="bg-primery border border-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
                   
                   {/* Effective Date */}
-                  <div className="bg-gradient-to-r from-blue-500 to-cyan-600 px-6 py-4">
+                  <div className="bg-primery px-6 py-4">
                     <div className="flex items-center justify-between text-white">
                       <div className="flex items-center gap-2">
                         <Clock className="w-4 h-4" />
@@ -163,16 +163,16 @@ const Terms = () => {
                         }`}
                       >
                         <div className="flex items-center gap-3 mb-4">
-                          <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center text-white">
+                          <div className="w-8 h-8 bg-green rounded-lg flex items-center justify-center text-white">
                             {section.icon}
                           </div>
-                          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+                          <h2 className="text-2xl font-bold text-red">
                             {section.title}
                           </h2>
                         </div>
                         
                         <div className="prose prose-lg dark:prose-invert max-w-none">
-                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
+                          <p className="text-white leading-relaxed whitespace-pre-line">
                             {section.content}
                           </p>
                         </div>
@@ -185,20 +185,20 @@ const Terms = () => {
                   </div>
 
                   {/* Acceptance Section */}
-                  <div className="bg-gray-50 dark:bg-gray-700/50 px-6 py-8 border-t border-gray-200 dark:border-gray-600">
+                  <div className="bg-primery dark:bg-gray-700/50 px-6 py-8 border-t border-gray-200 dark:border-gray-600">
                     <div className="text-center">
-                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                      <h3 className="text-xl font-semibold text-white dark:text-white mb-2">
                         Acceptance of Terms
                       </h3>
-                      <p className="text-gray-600 dark:text-gray-300 mb-4">
+                      <p className="text-white dark:text-gray-300 mb-4">
                         By using our services, you acknowledge that you have read, understood, and agree to be bound by these terms.
                       </p>
-                      <div className="flex items-center justify-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+                      <div className="flex items-center justify-center gap-4 text-sm text-white dark:text-gray-400">
                         <div className="flex items-center gap-2">
                           <FileText className="w-4 h-4" />
                           <span>Last Updated: January 15, 2024</span>
                         </div>
-                        <div className="w-px h-4 bg-gray-300 dark:bg-gray-600"></div>
+                        <div className="w-px h-4 bg-gray-300 dark:bg-white"></div>
                         <div className="flex items-center gap-2">
                           <Scale className="w-4 h-4" />
                           <span>Version 2.1</span>

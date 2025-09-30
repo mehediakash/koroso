@@ -117,7 +117,7 @@ const Programs = () => {
                     transition={{ delay: programIndex * 0.15, duration: 0.6, ease: "easeOut" }}
                   >
                     {/* Existing card design remains unchanged */}
-                    <div className="relative h-full bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
+                    <div className="relative h-full bg-white dark:bg-gray-800/70 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-gray-200/50 dark:border-gray-700/50 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 overflow-hidden">
                       <div className={`absolute inset-0 bg-gradient-to-br ${program.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
                       <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${program.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}>
                         <div className="absolute inset-[2px] rounded-2xl bg-white dark:bg-gray-800"></div>

@@ -26,19 +26,20 @@ const Contact = () => {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Our Office",
-      content: "1031 33rd Street, Denver, Colorado 80205",
+      content: " 300 Washington Ave, Minneapolis, MN ",
       description: "Visit us during business hours"
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Phone Number",
-      content: "(303) 772-2723",
+      content: "612-442-2126 ",
       description: "Mon-Fri from 8am to 6pm"
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email Address",
-      content: "info@ewb-usa.org",
+    
+      content: "info@otis.org",
       description: "We'll respond within 24 hours"
     },
     {
@@ -100,14 +101,14 @@ const Contact = () => {
                     
                     <div className="space-y-4">
                       {contactInfo.map((info, index) => (
-                        <div key={index} className="flex items-start gap-4 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors duration-200">
-                          <div className="w-10 h-10 bg-gradient-to-r from-primery to-primery rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                        <div key={index} className="flex group items-start gap-4 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors duration-200">
+                          <div className="w-10 h-10 bg-white from-primery  to-primery rounded-lg flex items-center justify-center text-primery flex-shrink-0">
                             {info.icon}
                           </div>
                           <div>
-                            <h4 className="font-semibold text-white dark:text-white">{info.title}</h4>
-                            <p className="text-white dark:text-gray-300">{info.content}</p>
-                            <p className="text-sm text-white ">{info.description}</p>
+                            <h4 className="font-semibold text-white group-hover:text-primery dark:text-white">{info.title}</h4>
+                            <p className="text-white group-hover:text-primery dark:text-gray-300">{info.content}</p>
+                            <p className="text-sm group-hover:text-primery text-white ">{info.description}</p>
                           </div>
                         </div>
                       ))}
@@ -119,13 +120,13 @@ const Contact = () => {
                     <h4 className="text-lg font-semibold mb-2">Need Immediate Help?</h4>
                     <p className="text-primery-100 mb-4">Contact our support team for urgent inquiries.</p>
                     <div className="space-y-2">
-                      <a href="tel:3037722723" className="flex items-center gap-2 hover:underline">
+                      <a href="tel:612-442-2126" className="flex items-center gap-2 hover:underline">
                         <Phone className="w-4 h-4" />
-                        Call Support: (303) 772-2723
+                        Call Support: 612-442-2126
                       </a>
-                      <a href="mailto:support@example.com" className="flex items-center gap-2 hover:underline">
+                      <a href="mailto:support@otis.org" className="flex items-center gap-2 hover:underline">
                         <Mail className="w-4 h-4" />
-                        support@example.com
+                        support@otis.org
                       </a>
                     </div>
                   </div>
@@ -183,7 +184,7 @@ const Contact = () => {
                             required
                             value={formData.name}
                             onChange={handleInputChange}
-                            className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primery focus:border-transparent bg-white dark:bg-gray-700 text-white dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200"
+                            className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primery focus:border-transparent bg-white dark:bg-gray-700 text-primery dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200"
                             placeholder="Enter your full name"
                           />
                         </div>
@@ -191,7 +192,7 @@ const Contact = () => {
 
                       {/* Email Field */}
                       <div className="space-y-2">
-                        <label htmlFor="email" className="block text-sm font-medium text-white dark:text-gray-300">
+                        <label htmlFor="email" className="block text-sm font-medium text-primery dark:text-gray-300">
                           Email Address *
                         </label>
                         <div className="relative">
@@ -203,7 +204,7 @@ const Contact = () => {
                             required
                             value={formData.email}
                             onChange={handleInputChange}
-                            className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primery focus:border-transparent bg-white dark:bg-gray-700 text-white dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200"
+                            className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primery focus:border-transparent bg-white dark:bg-gray-700 text-primery dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-200"
                             placeholder="Enter your email address"
                           />
                         </div>
@@ -221,7 +222,7 @@ const Contact = () => {
                         required
                         value={formData.subject}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primery focus:border-transparent bg-white dark:bg-gray-700 text-white dark:text-white transition-all duration-200"
+                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primery focus:border-transparent bg-white dark:bg-gray-700 text-primery dark:text-white transition-all duration-200"
                       >
                         <option value="">Select a subject</option>
                         <option value="general">General Inquiry</option>
@@ -244,7 +245,7 @@ const Contact = () => {
                         rows={6}
                         value={formData.message}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primery focus:border-transparent bg-white dark:bg-gray-700 text-white dark:text-white placeholder-gray-500 dark:placeholder-gray-400 resize-none transition-all duration-200"
+                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primery focus:border-transparent bg-white dark:bg-gray-700 text-primery placeholder-gray-500 dark:placeholder-gray-400 resize-none transition-all duration-200"
                         placeholder="Tell us how we can help you..."
                       />
                     </div>

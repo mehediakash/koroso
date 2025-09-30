@@ -12,20 +12,20 @@ import DynamicSEO from '../components/DynamicSEO'
 
 const home = () => {
   const jsonLdData = {
-    "@context": "https://schema.org",
+    "@context": "https://otis.org",
     "@type": "Organization",
     "name": "Oromo Tech & Innovation Society",
-    "url": "https://yourwebsite.com",
-    "logo": "https://yourwebsite.com/logo.png"
+    "url": "https://otis.org",
+    "logo": "https://i.ibb.co.com/0jNkxs2P/logo.png"
   }
   return (
     <>
-<DynamicSEO
+      <DynamicSEO
         title="Oromo Tech & Innovation Society – Home"
         description="Oromo Tech & Innovation Society promotes innovation, leadership and entrepreneurship through sustainable programs."
         keywords="Oromo Tech, Innovation, Leadership, Entrepreneurship, OTIS"
-        image="https://ewb-usa.org/files/galleries/EWBUSAHomepage.png"
-        url="https://yourwebsite.com"
+        image="https://i.ibb.co.com/0jNkxs2P/logo.png"
+        url="https://otis.org"
       />
     <Banner/>
     <MissionVision/>

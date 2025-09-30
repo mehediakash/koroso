@@ -97,21 +97,18 @@ const handleSmoothScroll = (e, href) => {
     programs: {
       title: "PROGRAMS",
       links: [
-        { name: "International Community Program", href: "#" },
-        { name: "Community Engineering Corps", href: "#", external: true },
-        { name: "Engineering Climate Resilience", href: "#" },
-        { name: "Community Health", href: "#" },
-        { name: "Request Engineering Services", href: "#" }
+        { name: "Students & Early Career", href: "#" },
+        { name: "Professionals & Employers", href: "#", external: true },
+        { name: "Community & Innovation", href: "#" },
+
       ]
     },
     involvement: {
       title: "GET INVOLVED",
       links: [
-        { name: "Volunteer", href: "/volunteer" },
+        { name: "Volunteer", href: "/#" },
         { name: "Volunteer Registration", href: "#" },
         { name: "Volunteer Village", href: "#", external: true },
-        { name: "Find a Chapter", href: "#" },
-        { name: "Corporate Engagement", href: "#" }
       ]
     }
   };

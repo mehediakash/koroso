@@ -223,8 +223,8 @@ const handleSmoothScroll = (e, href) => {
               </a> */}
               
               <a 
-               target="_blank"
-            href="https://stripe.com/"
+                target="_blank"
+                href="https://donate.stripe.com/test_fZu6oHg30eyw4dtep367S00"
                 className="px-6 py-2 text-lg  bg-primery text-white rounded-full border-red border hover:bg-red transition-colors duration-200 font-medium"
               >
                 Donate Now
