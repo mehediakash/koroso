@@ -18,11 +18,11 @@ const TeamMembers = () => {
   const teamMembers = [
     {
       id: 1,
-      name: "HAWWANI BENTI",
-      position: "President",
+      name: "SULTAN KOROSO",
+      position: "Founder & Executive Director",
       image: "https://static.wixstatic.com/media/ebdd51_71215aea28b9452796e74c9c099830fe~mv2.jpg/v1/fill/w_301,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/sides-153_edited.jpg",
-      bio: "Hawwani Benti is a senior majoring in business and marketing. Her favorite song Ajaba Bontu by Umar Alii Faarah.",
-      major: "Business & Marketing",
+      bio: "Sultan Koroso is a junior majoring in Computer Engineering with a minor in Entrepreneurship at the University of Minnesota, College of Science and Engineering. He is passionate about building innovative technologies, launching ventures, and creating opportunities that empower communities to thrive.",
+      major: "Majoring in CSE",
       year: "Senior",
       socialLinks: {
         email: "hawwani@example.com",

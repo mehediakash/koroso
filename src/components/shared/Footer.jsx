@@ -98,8 +98,8 @@ const handleSmoothScroll = (e, href) => {
       title: "PROGRAMS",
       links: [
         { name: "Students & Early Career", href: "#Programs" },
-        { name: "Professionals & Employers", href: "#", external: true },
-        { name: "Community & Innovation", href: "#" },
+        { name: "Professionals & Employers", href: "#Programs", external: true },
+        { name: "Community & Innovation", href: "#Programs" },
 
       ]
     },
@@ -107,8 +107,8 @@ const handleSmoothScroll = (e, href) => {
       title: "GET INVOLVED",
       links: [
         { name: "Volunteer", href: "/#" },
-        { name: "Volunteer Registration", href: "#" },
-        { name: "Volunteer Village", href: "#", external: true },
+        { name: "Volunteer Registration", href: "https://docs.google.com/forms/d/e/1FAIpQLSdH3MdgvtnuJB5pbhGJmQS2AgfsybaZeLh6g-3OhYjHACAeww/viewform" },
+        // { name: "Volunteer Village", href: "#", external: true },
       ]
     }
   };
