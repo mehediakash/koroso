@@ -794,8 +794,9 @@ Who can I contact to get more information about this process? Questions on alleg
                     Student Group Policies
                   </h3>
                   <p className="text-yellow-700 dark:text-yellow-400">
-                    This webpage contains the Student Unions and Activities (SUA) policies relevant to student groups registered at the University of Minnesota. All students must comply with the policies listed in order for student groups to remain in good standing with the University. Individual University departments may have additional departmental policies for specific student group activities.
-                  </p>
+                    Our organization follows the University of Minnesota Student Group Policies and Minnesota nonprofit guidelines.
+For more information, please visit:
+<a  className='text-[#1E88E5]' href="https://sua.umn.edu/student-group-policies"> https://sua.umn.edu/student-group-policies       </a>           </p>
                 </div>
               </div>
             </div>

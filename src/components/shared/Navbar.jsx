@@ -144,7 +144,7 @@ const handleSmoothScroll = (e, href) => {
       
     },
     {
-      href: "/contact", 
+      href: "/contact.html", 
       target: "_blank" ,
       title: "Contact",
       
@@ -170,8 +170,8 @@ const handleSmoothScroll = (e, href) => {
             <nav className="hidden lg:flex items-center space-x-8">
               {menuItems?.map((item, index) => (
                 <div key={index} className="relative group">
-                   <Link 
-                                to={item.href}
+                   <a 
+                                href={item.href}
                                 
                               onClick={(e) =>
                 item.href.startsWith("#") && handleSmoothScroll(e, item.href)
@@ -186,7 +186,7 @@ const handleSmoothScroll = (e, href) => {
                   <button className="text-white md:text-xl cursor-pointer  hover:text-white font-medium py-2 transition-colors duration-200">
                     {item.title}
                   </button>
-                  </Link>
+                  </a>
                   
                   {/* Mega Menu Dropdown */}
                   {/* <div className="absolute left-0 mt-2 w-96 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">

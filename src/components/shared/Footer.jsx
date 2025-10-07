@@ -85,8 +85,8 @@ const handleSmoothScroll = (e, href) => {
     about: {
       title: "ABOUT US",
       links: [
-        { name: "Terms", href: "/terms" },
-        { name: "Privacy", href: "/privacy" },
+        { name: "Terms", href: "/terms.html" },
+        { name: "Privacy", href: "/privacy.html" },
         { name: "Programs", href: "#Programs" },
         { name: "Our Team", href: "#Team" },
         { name: "Get Involved", href: "https://docs.google.com/forms/d/e/1FAIpQLSdH3MdgvtnuJB5pbhGJmQS2AgfsybaZeLh6g-3OhYjHACAeww/viewform" },

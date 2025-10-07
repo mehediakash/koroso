@@ -12,9 +12,9 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/privacy" element={<Privacy />} />
-        <Route path="/terms" element={<Terms />} />
+        <Route path="/contact.html" element={<Contact />} />
+        <Route path="/privacy.html" element={<Privacy />} />
+        <Route path="/terms.html" element={<Terms />} />
       </Route>
     )
   );

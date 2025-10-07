@@ -20,7 +20,7 @@ const TeamMembers = () => {
       id: 1,
       name: "SULTAN KOROSO",
       position: "Founder & Executive Director",
-      image: "https://static.wixstatic.com/media/ebdd51_71215aea28b9452796e74c9c099830fe~mv2.jpg/v1/fill/w_301,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/sides-153_edited.jpg",
+      image: "https://i.ibb.co.com/qq1Bfyt/575-AEC85-63-F8-4-CD1-97-EA-8-DC727-AD5333.jpg",
       bio: "Sultan Koroso is a junior majoring in Computer Engineering with a minor in Entrepreneurship at the University of Minnesota, College of Science and Engineering. He is passionate about building innovative technologies, launching ventures, and creating opportunities that empower communities to thrive.",
       major: "Majoring in CSE",
       year: "Senior",
@@ -33,10 +33,10 @@ const TeamMembers = () => {
     },
     {
       id: 2,
-      name: "AMANE ETEFA",
+      name: "Atinaaf ",
       position: "Vice-President",
-      image: "https://static.wixstatic.com/media/ebdd51_5808d717ba1e46dfa72dcdbb96efbac1~mv2.jpg/v1/fill/w_301,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/sides-158_edited.jpg",
-      bio: "Amane Etefa is a junior majoring in global studies and art history. Her favorite song Kana Jedhiin by Gadaa Hamda.",
+      image: "https://t3.ftcdn.net/jpg/06/18/71/24/240_F_618712478_uETCT3zDHqjGXAhCqHX4rkgWmkWn81hc.jpg",
+      bio: "Atinaaf  is a junior majoring in global studies and art history. Her favorite song Kana Jedhiin by Gadaa Hamda.",
       major: "Global Studies & Art History",
       year: "Junior",
       socialLinks: {
@@ -48,10 +48,10 @@ const TeamMembers = () => {
     },
     {
       id: 3,
-      name: "FAAYA ADEM",
+      name: "Bayeettii",
       position: "Secretary",
-      image: "https://static.wixstatic.com/media/ebdd51_abaf24b7ef93486b9ad6c99c1bbe9fcc~mv2.jpg/v1/fill/w_301,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/sides-129_edited.jpg",
-      bio: "Faaya Adem is a junior majoring in journalism and geography. Her favorite song is Barreedduu Oromo by Ali Birra.",
+      image: "https://t4.ftcdn.net/jpg/06/69/37/17/240_F_669371793_XcH9TAwXJbrDnamaXsD1FAXen4HSQ0lQ.jpg",
+      bio: "Bayeettii is a junior majoring in journalism and geography. Her favorite song is Barreedduu Oromo by Ali Birra.",
       major: "Journalism & Geography",
       year: "Junior",
       socialLinks: {
@@ -185,11 +185,11 @@ const TeamMembers = () => {
                   </div>
 
                   {/* Bio */}
-                  {showBio && (
+          
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6 line-clamp-3">
                       {member.bio}
                     </p>
-                  )}
+            
 
                 </div>
 
@@ -204,14 +204,14 @@ const TeamMembers = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-16 lg:mt-20">
           <div className="inline-flex flex-col sm:flex-row gap-4">
-            <button 
+            {/* <button 
               onClick={() => setShowBio(!showBio)}
               className="px-8 py-4 bg-gradient-to-r from-primery to-primery text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2">
               {showBio ? 'Hide Team Bios' : 'Meet Full Team'}
               <ExternalLink className="w-4 h-4" />
-            </button>
+            </button> */}
            
-            <button className="px-8 py-4 bg-white/80 dark:bg-gray-800/80 text-gray-900 dark:text-white font-semibold rounded-xl border border-gray-200/50 dark:border-gray-700/50 shadow-sm hover:shadow-md transition-all duration-300">
+            <button className="px-8 py-4 bg-red text-white dark:bg-gray-800/80 text-gray-900 dark:text-white font-semibold rounded-xl border border-gray-200/50 dark:border-gray-700/50 shadow-sm hover:shadow-md transition-all duration-300">
                <Link target='_blank' to={"https://docs.google.com/forms/d/e/1FAIpQLSdH3MdgvtnuJB5pbhGJmQS2AgfsybaZeLh6g-3OhYjHACAeww/viewform"}>
               Join Our Team
               </Link>
